@@ -1,0 +1,1360 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08.数据存储 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../09.调度器/09.调度器.html" />
+    
+    
+    <link rel="prev" href="../07.Service/07.Service.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    01.kubernetes概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../02.Pod与网络/02.Pod与网络.html">
+            
+                <a href="../02.Pod与网络/02.Pod与网络.html">
+            
+                    
+                    02.Pod与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../03.安装手册/03.安装手册.html">
+            
+                <a href="../03.安装手册/03.安装手册.html">
+            
+                    
+                    03.安装手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../04.资源清单/04.资源清单.html">
+            
+                <a href="../04.资源清单/04.资源清单.html">
+            
+                    
+                    04.资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                <a href="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                    
+                    05.Pod生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../06.Pod控制器/06.Pod控制器.html">
+            
+                <a href="../06.Pod控制器/06.Pod控制器.html">
+            
+                    
+                    06.Pod控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../07.Service/07.Service.html">
+            
+                <a href="../07.Service/07.Service.html">
+            
+                    
+                    07.Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="08.数据存储.html">
+            
+                <a href="08.数据存储.html">
+            
+                    
+                    08.数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../09.调度器/09.调度器.html">
+            
+                <a href="../09.调度器/09.调度器.html">
+            
+                    
+                    09.调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../10.安全认证/10.安全认证.html">
+            
+                <a href="../10.安全认证/10.安全认证.html">
+            
+                    
+                    10.安全认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../11.DashBoard/11.DashBoard.html">
+            
+                <a href="../11.DashBoard/11.DashBoard.html">
+            
+                    
+                    11.DashBoard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >08.数据存储</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#08&#x6570;&#x636E;&#x5B58;&#x50A8;"><b></b>08.&#x6570;&#x636E;&#x5B58;&#x50A8;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5B58;&#x50A8;"><b></b>&#x6570;&#x636E;&#x5B58;&#x50A8;</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x672C;&#x5B58;&#x50A8;"><b></b>&#x57FA;&#x672C;&#x5B58;&#x50A8;</a></li><ul><li><span class="title-icon "></span><a href="#emptydir"><b></b>EmptyDir</a></li><li><span class="title-icon "></span><a href="#hostpath"><b></b>HostPath</a></li><li><span class="title-icon "></span><a href="#nfs"><b></b>NFS</a></li></ul><li><span class="title-icon "></span><a href="#&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;"><b></b>&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;</a></li><ul><li><span class="title-icon "></span><a href="#pv"><b></b>PV</a></li><li><span class="title-icon "></span><a href="#pvc"><b></b>PVC</a></li><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x547D;&#x5468;&#x671F;"><b></b>&#x751F;&#x547D;&#x5468;&#x671F;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5B58;&#x50A8;"><b></b>&#x914D;&#x7F6E;&#x5B58;&#x50A8;</a></li><ul><li><span class="title-icon "></span><a href="#configmap"><b></b>ConfigMap</a></li><ul><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;"><b></b>&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x6302;&#x8F7D;"><b></b>&#x6587;&#x4EF6;&#x6302;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x70ED;&#x66F4;&#x65B0;"><b></b>&#x70ED;&#x66F4;&#x65B0;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x53EF;&#x53D8;configmap"><b></b>&#x4E0D;&#x53EF;&#x53D8;configmap</a></li></ul><li><span class="title-icon "></span><a href="#secret"><b></b>Secret</a></li><ul><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;_1"><b></b>&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x6302;&#x8F7D;_1"><b></b>&#x6587;&#x4EF6;&#x6302;&#x8F7D;</a></li></ul></ul></ul></div><a href="#08&#x6570;&#x636E;&#x5B58;&#x50A8;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="08&#x6570;&#x636E;&#x5B58;&#x50A8;"><a name="08&#x6570;&#x636E;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#08&#x6570;&#x636E;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>08.&#x6570;&#x636E;&#x5B58;&#x50A8;</h1>
+<h1 id="&#x6570;&#x636E;&#x5B58;&#x50A8;"><a name="&#x6570;&#x636E;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5B58;&#x50A8;</h1>
+<p>&#x5728;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;&#xFF0C;&#x5BB9;&#x5668;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x53EF;&#x80FD;&#x5F88;&#x77ED;&#xFF0C;&#x4F1A;&#x88AB;&#x9891;&#x7E41;&#x5730;&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#x3002;&#x90A3;&#x4E48;&#x5BB9;&#x5668;&#x5728;&#x9500;&#x6BC1;&#x65F6;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E5F;&#x4F1A;&#x88AB;&#x6E05;&#x9664;&#x3002;&#x8FD9;&#x79CD;&#x7ED3;&#x679C;&#x5BF9;&#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x4E0D;&#x4E50;&#x610F;&#x770B;&#x5230;&#x7684;&#x3002;&#x4E3A;&#x4E86;&#x6301;&#x4E45;&#x5316;&#x4FDD;&#x5B58;&#x5BB9;&#x5668;&#x7684;&#x6570;&#x636E;&#xFF0C;kubernetes&#x5F15;&#x5165;&#x4E86;Volume&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>Volume&#x662F;Pod&#x4E2D;&#x80FD;&#x591F;&#x88AB;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x8BBF;&#x95EE;&#x7684;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#xFF0C;&#x5B83;&#x88AB;&#x5B9A;&#x4E49;&#x5728;Pod&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x4E00;&#x4E2A;Pod&#x91CC;&#x7684;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x6302;&#x8F7D;&#x5230;&#x5177;&#x4F53;&#x7684;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;kubernetes&#x901A;&#x8FC7;Volume&#x5B9E;&#x73B0;&#x540C;&#x4E00;&#x4E2A;Pod&#x4E2D;&#x4E0D;&#x540C;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7684;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x3002;Volume&#x7684;&#x751F;&#x547D;&#x5BB9;&#x5668;&#x4E0D;&#x4E0E;Pod&#x4E2D;&#x5355;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#xFF0C;&#x5F53;&#x5BB9;&#x5668;&#x7EC8;&#x6B62;&#x6216;&#x8005;&#x91CD;&#x542F;&#x65F6;&#xFF0C;Volume&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;</p>
+<p>kubernetes&#x7684;Volume&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>&#x7B80;&#x5355;&#x5B58;&#x50A8;&#xFF1A;EmptyDir&#x3001;HostPath&#x3001;NFS</li>
+<li>&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;&#xFF1A;PV&#x3001;PVC</li>
+<li>&#x914D;&#x7F6E;&#x5B58;&#x50A8;&#xFF1A;ConfigMap&#x3001;Secret</li>
+</ul>
+<h1 id="&#x57FA;&#x672C;&#x5B58;&#x50A8;"><a name="&#x57FA;&#x672C;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x5B58;&#x50A8;</h1>
+<h2 id="emptydir"><a name="emptydir" class="anchor-navigation-ex-anchor" href="#emptydir"><i class="fa fa-link" aria-hidden="true"></i></a>EmptyDir</h2>
+<p>EmptyDir&#x662F;&#x6700;&#x57FA;&#x7840;&#x7684;Volume&#x7C7B;&#x578B;&#xFF0C;<strong>&#x4E00;&#x4E2A;EmptyDir&#x5C31;&#x662F;Host&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x7A7A;&#x76EE;&#x5F55;</strong>&#x3002;</p>
+<p>EmptyDir&#x662F;&#x5728;Pod&#x88AB;&#x5206;&#x914D;&#x5230;Node&#x65F6;&#x521B;&#x5EFA;&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x521D;&#x59CB;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#xFF0C;&#x5E76;&#x4E14;&#x65E0;&#x987B;&#x6307;&#x5B9A;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;kubernetes&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5F53;Pod&#x9500;&#x6BC1;&#x65F6;&#xFF0C; EmptyDir&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E5F;&#x4F1A;&#x88AB;&#x6C38;&#x4E45;&#x5220;&#x9664;&#x3002; EmptyDir&#x7528;&#x9014;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x4E34;&#x65F6;&#x7A7A;&#x95F4;&#xFF0C;&#x4F8B;&#x5982;&#x7528;&#x4E8E;&#x67D0;&#x4E9B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x6240;&#x9700;&#x7684;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#xFF0C;&#x4E14;&#x65E0;&#x987B;&#x6C38;&#x4E45;&#x4FDD;&#x7559;</li>
+<li>&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x9700;&#x8981;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x76EE;&#x5F55;&#xFF08;&#x591A;&#x5BB9;&#x5668;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#xFF09;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x6587;&#x4EF6;&#x5171;&#x4EAB;&#x7684;&#x6848;&#x4F8B;&#x6765;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;EmptyDir&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x4E2A;Pod&#x4E2D;&#x51C6;&#x5907;&#x4E24;&#x4E2A;&#x5BB9;&#x5668;nginx&#x548C;busybox&#xFF0C;&#x7136;&#x540E;&#x58F0;&#x660E;&#x4E00;&#x4E2A;Volume&#x5206;&#x522B;&#x6302;&#x5728;&#x5230;&#x4E24;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x7136;&#x540E;nginx&#x5BB9;&#x5668;&#x8D1F;&#x8D23;&#x5411;Volume&#x4E2D;&#x5199;&#x65E5;&#x5FD7;&#xFF0C;busybox&#x4E2D;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x5C06;&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#x8BFB;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x3002;</p>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240914160404461.png" alt="image-20240914160404461"></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> volume-emptydir
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-attr">    - containerPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">    volumeMounts:</span>  <span class="hljs-comment"># &#x5C06;logs-volume&#x6302;&#x5728;&#x5230;nginx&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x4E3A; /var/log/nginx</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /var/log/nginx
+<span class="hljs-attr">  - name:</span> busybox
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;tail -f /logs/access.log&quot;</span>] <span class="hljs-comment"># &#x521D;&#x59CB;&#x547D;&#x4EE4;&#xFF0C;&#x52A8;&#x6001;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;&#x5185;&#x5BB9;</span>
+<span class="hljs-attr">    volumeMounts:</span>  <span class="hljs-comment"># &#x5C06;logs-volume &#x6302;&#x5728;&#x5230;busybox&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x4E3A; /logs</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /logs
+<span class="hljs-attr">  volumes:</span> <span class="hljs-comment"># &#x58F0;&#x660E;volume&#xFF0C; name&#x4E3A;logs-volume&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;emptyDir</span>
+<span class="hljs-attr">  - name:</span> logs-volume
+<span class="hljs-attr">    emptyDir:</span> {}
+</code></pre>
+<p>&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-bash">$ kubectl get pod -o wide
+NAME              READY   STATUS    RESTARTS   AGE    IP               NODE     NOMINATED NODE   READINESS GATES
+volume-emptydir   2/2     Running   0          102s   10.244.196.158   node01   &lt;none&gt;           &lt;none&gt;
+$ curl 10.244.196.158/hostname.html
+volume-emptydir
+$ kubectl logs <span class="hljs-_">-f</span> volume-emptydir -c busybox
+192.168.173.100 - - [14/Sep/2024:08:10:03 +0000] <span class="hljs-string">&quot;GET /hostname.html HTTP/1.1&quot;</span> 200 16 <span class="hljs-string">&quot;-&quot;</span> <span class="hljs-string">&quot;curl/7.76.1&quot;</span> <span class="hljs-string">&quot;-&quot;</span>
+</code></pre>
+<h2 id="hostpath"><a name="hostpath" class="anchor-navigation-ex-anchor" href="#hostpath"><i class="fa fa-link" aria-hidden="true"></i></a>HostPath</h2>
+<p>EmptyDir&#x4E2D;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x88AB;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x5B83;&#x4F1A;&#x968F;&#x7740;Pod&#x7684;&#x7ED3;&#x675F;&#x800C;&#x9500;&#x6BC1;&#xFF0C;&#x5982;&#x679C;<strong>&#x60F3;&#x7B80;&#x5355;&#x7684;&#x5C06;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x5230;&#x4E3B;&#x673A;</strong>&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;HostPath&#x3002;</p>
+<p>HostPath&#x5C31;&#x662F;&#x5C06;Node&#x4E3B;&#x673A;&#x4E2D;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x76EE;&#x5F55;&#x6302;&#x5728;&#x5230;Pod&#x4E2D;&#xFF0C;&#x4EE5;&#x4F9B;&#x5BB9;&#x5668;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BBE;&#x8BA1;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;Pod&#x9500;&#x6BC1;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x6570;&#x636E;&#x4F9D;&#x636E;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x4E8E;Node&#x4E3B;&#x673A;&#x4E0A;&#x3002;</p>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240914161526676.png" alt="image-20240914161526676"></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> volume-hostpath
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-attr">    - containerPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">    volumeMounts:</span>  <span class="hljs-comment"># &#x5C06;logs-volume&#x6302;&#x5728;&#x5230;nginx&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x4E3A; /var/log/nginx</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /var/log/nginx
+<span class="hljs-attr">  - name:</span> busybox
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;tail -f /logs/access.log&quot;</span>] <span class="hljs-comment"># &#x521D;&#x59CB;&#x547D;&#x4EE4;&#xFF0C;&#x52A8;&#x6001;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;&#x5185;&#x5BB9;</span>
+<span class="hljs-attr">    volumeMounts:</span>  <span class="hljs-comment"># &#x5C06;logs-volume &#x6302;&#x5728;&#x5230;busybox&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x4E3A; /logs</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /logs
+<span class="hljs-attr">  volumes:</span> <span class="hljs-comment"># &#x58F0;&#x660E;volume&#xFF0C; name&#x4E3A;logs-volume&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;emptyDir</span>
+<span class="hljs-attr">  - name:</span> logs-volume
+<span class="hljs-attr">    hostPath:</span> 
+<span class="hljs-attr">      path:</span> /root/logs
+<span class="hljs-attr">      type:</span> DirectoryOrCreate  <span class="hljs-comment"># &#x76EE;&#x5F55;&#x5B58;&#x5728;&#x5C31;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x5148;&#x521B;&#x5EFA;&#x540E;&#x4F7F;&#x7528;</span>
+</code></pre>
+<p>&#x5173;&#x4E8E;type&#x7684;&#x503C;&#x7684;&#x4E00;&#x70B9;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>DirectoryOrCreate &#x76EE;&#x5F55;&#x5B58;&#x5728;&#x5C31;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x5148;&#x521B;&#x5EFA;&#x540E;&#x4F7F;&#x7528;</li>
+<li>Directory &#x76EE;&#x5F55;&#x5FC5;&#x987B;&#x5B58;&#x5728;</li>
+<li>FileOrCreate &#x6587;&#x4EF6;&#x5B58;&#x5728;&#x5C31;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x5148;&#x521B;&#x5EFA;&#x540E;&#x4F7F;&#x7528;</li>
+<li>File &#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x5728;</li>
+<li>Socket unix&#x5957;&#x63A5;&#x5B57;&#x5FC5;&#x987B;&#x5B58;&#x5728;</li>
+<li>CharDevice &#x5B57;&#x7B26;&#x8BBE;&#x5907;&#x5FC5;&#x987B;&#x5B58;&#x5728;</li>
+<li>BlockDevice &#x5757;&#x8BBE;&#x5907;&#x5FC5;&#x987B;&#x5B58;&#x5728;</li>
+</ul>
+<p>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;</p>
+<pre><code class="lang-bash">$ kubectl get pod -o wide
+NAME              READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+volume-hostpath   2/2     Running   0          55s   10.244.196.157   node01   &lt;none&gt;           &lt;none&gt;
+
+$ curl 10.244.196.157/hostname.html
+volume-hostpath
+
+$ ssh root@node01
+root@node01<span class="hljs-string">&apos;s password: 
+Last login: Sat Sep 14 16:11:40 2024 from 192.168.173.100
+$ cat /root/logs/access.log 
+192.168.173.100 - - [14/Sep/2024:08:18:50 +0000] &quot;GET /hostname.html HTTP/1.1&quot; 200 16 &quot;-&quot; &quot;curl/7.76.1&quot; &quot;-&quot;
+192.168.173.100 - - [14/Sep/2024:08:23:01 +0000] &quot;GET /hostname.html HTTP/1.1&quot; 200 16 &quot;-&quot; &quot;curl/7.76.1&quot; &quot;-&quot;
+</span></code></pre>
+<h2 id="nfs"><a name="nfs" class="anchor-navigation-ex-anchor" href="#nfs"><i class="fa fa-link" aria-hidden="true"></i></a>NFS</h2>
+<p> HostPath&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x65E6;Node&#x8282;&#x70B9;&#x6545;&#x969C;&#x4E86;&#xFF0C;Pod&#x5982;&#x679C;&#x8F6C;&#x79FB;&#x5230;&#x4E86;&#x522B;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x53C8;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x51C6;&#x5907;&#x5355;&#x72EC;&#x7684;&#x7F51;&#x7EDC;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;<strong>&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x7528;NFS&#x3001;CIFS</strong>&#x3002;</p>
+<p> NFS&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x642D;&#x5EFA;&#x4E00;&#x53F0;NFS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x5C06;Pod&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;NFS&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x65E0;&#x8BBA;Pod&#x5728;&#x8282;&#x70B9;&#x4E0A;&#x600E;&#x4E48;&#x8F6C;&#x79FB;&#xFF0C;&#x53EA;&#x8981;Node&#x8DDF;NFS&#x7684;&#x5BF9;&#x63A5;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x6570;&#x636E;&#x5C31;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x8BBF;&#x95EE;&#x3002;</p>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240915123914270.png" alt="image-20240915123914270"></p>
+<ul>
+<li>&#x9996;&#x5148;&#x8981;&#x51C6;&#x5907;nfs&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x662F;master&#x8282;&#x70B9;&#x505A;nfs&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;nfs&#x670D;&#x52A1;</span>
+$ yum install nfs-utils -y
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;</span>
+$ mkdir -pv /root/data/nfs
+mkdir: created directory <span class="hljs-string">&apos;/root/data&apos;</span>
+mkdir: created directory <span class="hljs-string">&apos;/root/data/nfs&apos;</span>
+
+<span class="hljs-comment"># &#x5C06;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;&#x8BFB;&#x5199;&#x6743;&#x9650;&#x66B4;&#x9732;&#x7ED9;192.168.173.0/24&#x7F51;&#x6BB5;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4E3B;&#x673A;</span>
+$ vim /etc/exports
+/root/data/nfs  192.168.173.0/24(rw,no_root_squash)
+
+<span class="hljs-comment"># &#x542F;&#x52A8;nfs&#x670D;&#x52A1;</span>
+$ systemctl restart nfs-server
+</code></pre>
+<ul>
+<li>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8981;&#x5728;&#x7684;&#x6BCF;&#x4E2A;node&#x8282;&#x70B9;&#x4E0A;&#x90FD;&#x5B89;&#x88C5;&#x4E0B;nfs&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;node&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x9A71;&#x52A8;nfs&#x8BBE;&#x5907;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5728;node&#x4E0A;&#x5B89;&#x88C5;nfs&#x670D;&#x52A1;&#xFF0C;&#x6CE8;&#x610F;&#x4E0D;&#x9700;&#x8981;&#x542F;&#x52A8;</span>
+$ yum install nfs-utils -y
+</code></pre>
+<ul>
+<li>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7F16;&#x5199;pod&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E86;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> volume-nfs
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-attr">    - containerPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">    volumeMounts:</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /var/log/nginx
+<span class="hljs-attr">  - name:</span> busybox
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;tail -f /logs/access.log&quot;</span>] 
+<span class="hljs-attr">    volumeMounts:</span>
+<span class="hljs-attr">    - name:</span> logs-volume
+<span class="hljs-attr">      mountPath:</span> /logs
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">  - name:</span> logs-volume
+<span class="hljs-attr">    nfs:</span>
+<span class="hljs-attr">      server:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>  <span class="hljs-comment">#nfs&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</span>
+<span class="hljs-attr">      path:</span> /root/data/nfs <span class="hljs-comment">#&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x6548;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5199;&#x5165;&#x5230;nfs&#x4E2D;&#x4E86;</li>
+</ul>
+<pre><code class="lang-bash">$ ls /root/data/nfs/
+access.log  error.log
+</code></pre>
+<h1 id="&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;"><a name="&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9AD8;&#x7EA7;&#x5B58;&#x50A8;</h1>
+<p>&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x5B66;&#x4E60;&#x4E86;&#x4F7F;&#x7528;NFS&#x63D0;&#x4F9B;&#x5B58;&#x50A8;&#xFF0C;&#x6B64;&#x65F6;&#x5C31;&#x8981;&#x6C42;&#x7528;&#x6237;&#x4F1A;&#x642D;&#x5EFA;NFS&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5728;yaml&#x914D;&#x7F6E;nfs&#x3002;&#x7531;&#x4E8E;kubernetes&#x652F;&#x6301;&#x7684;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x8981;&#x6C42;&#x5BA2;&#x6237;&#x5168;&#x90FD;&#x638C;&#x63E1;&#xFF0C;&#x663E;&#x7136;&#x4E0D;&#x73B0;&#x5B9E;&#x3002;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x5C4F;&#x853D;&#x5E95;&#x5C42;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;&#x7684;&#x7EC6;&#x8282;&#xFF0C;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x4F7F;&#x7528;&#xFF0C; kubernetes&#x5F15;&#x5165;PV&#x548C;PVC&#x4E24;&#x79CD;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>PV&#xFF08;Persistent Volume&#xFF09;&#x662F;&#x6301;&#x4E45;&#x5316;&#x5377;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x662F;&#x5BF9;&#x5E95;&#x5C42;&#x7684;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x7684;&#x4E00;&#x79CD;&#x62BD;&#x8C61;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;PV&#x7531;kubernetes&#x7BA1;&#x7406;&#x5458;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x548C;&#x914D;&#x7F6E;&#xFF0C;&#x5B83;&#x4E0E;&#x5E95;&#x5C42;&#x5177;&#x4F53;&#x7684;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x6280;&#x672F;&#x6709;&#x5173;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x63D2;&#x4EF6;&#x5B8C;&#x6210;&#x4E0E;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x7684;&#x5BF9;&#x63A5;&#x3002;</p>
+<p>PVC&#xFF08;Persistent Volume Claim&#xFF09;&#x662F;&#x6301;&#x4E45;&#x5377;&#x58F0;&#x660E;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x662F;&#x7528;&#x6237;&#x5BF9;&#x4E8E;&#x5B58;&#x50A8;&#x9700;&#x6C42;&#x7684;&#x4E00;&#x79CD;&#x58F0;&#x660E;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;PVC&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x7528;&#x6237;&#x5411;kubernetes&#x7CFB;&#x7EDF;&#x53D1;&#x51FA;&#x7684;&#x4E00;&#x79CD;&#x8D44;&#x6E90;&#x9700;&#x6C42;&#x7533;&#x8BF7;&#x3002;</p>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240915130118556.png" alt="image-20240915130118556"></p>
+<p>&#x4F7F;&#x7528;&#x4E86;PV&#x548C;PVC&#x4E4B;&#x540E;&#xFF0C;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x7EC6;&#x5206;&#xFF1A;</p>
+<ul>
+<li>&#x5B58;&#x50A8;&#xFF1A;&#x5B58;&#x50A8;&#x5DE5;&#x7A0B;&#x5E08;&#x7EF4;&#x62A4;</li>
+<li>PV&#xFF1A; kubernetes&#x7BA1;&#x7406;&#x5458;&#x7EF4;&#x62A4;</li>
+<li>PVC&#xFF1A;kubernetes&#x7528;&#x6237;&#x7EF4;&#x62A4;</li>
+</ul>
+<h2 id="pv"><a name="pv" class="anchor-navigation-ex-anchor" href="#pv"><i class="fa fa-link" aria-hidden="true"></i></a>PV</h2>
+<p>PV&#x662F;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x8D44;&#x6E90;&#x6E05;&#x5355;&#x6587;&#x4EF6;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1  
+<span class="hljs-attr">kind:</span> PersistentVolume
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pv2
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  nfs:</span> <span class="hljs-comment"># &#x5B58;&#x50A8;&#x7C7B;&#x578B;&#xFF0C;&#x4E0E;&#x5E95;&#x5C42;&#x771F;&#x6B63;&#x5B58;&#x50A8;&#x5BF9;&#x5E94;</span>
+<span class="hljs-attr">  capacity:</span>  <span class="hljs-comment"># &#x5B58;&#x50A8;&#x80FD;&#x529B;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x7684;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-attr">    storage:</span> <span class="hljs-number">2</span>Gi
+<span class="hljs-attr">  accessModes:</span>  <span class="hljs-comment"># &#x8BBF;&#x95EE;&#x6A21;&#x5F0F;</span>
+<span class="hljs-attr">  storageClassName:</span> <span class="hljs-comment"># &#x5B58;&#x50A8;&#x7C7B;&#x522B;</span>
+<span class="hljs-attr">  persistentVolumeReclaimPolicy:</span> <span class="hljs-comment"># &#x56DE;&#x6536;&#x7B56;&#x7565;</span>
+</code></pre>
+<p>PV &#x7684;&#x5173;&#x952E;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li><p><strong>&#x5B58;&#x50A8;&#x7C7B;&#x578B;</strong></p>
+<ul>
+<li>&#x5E95;&#x5C42;&#x5B9E;&#x9645;&#x5B58;&#x50A8;&#x7684;&#x7C7B;&#x578B;&#xFF0C;kubernetes&#x652F;&#x6301;&#x591A;&#x79CD;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#xFF0C;&#x6BCF;&#x79CD;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x7684;&#x914D;&#x7F6E;&#x90FD;&#x6709;&#x6240;&#x5DEE;&#x5F02;</li>
+</ul>
+</li>
+<li><p><strong>&#x5B58;&#x50A8;&#x80FD;&#x529B;&#xFF08;capacity&#xFF09;</strong></p>
+<ul>
+<li>&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x7684;&#x8BBE;&#x7F6E;( storage=1Gi )&#xFF0C;&#x4E0D;&#x8FC7;&#x672A;&#x6765;&#x53EF;&#x80FD;&#x4F1A;&#x52A0;&#x5165;IOPS&#x3001;&#x541E;&#x5410;&#x91CF;&#x7B49;&#x6307;&#x6807;&#x7684;&#x914D;&#x7F6E;</li>
+</ul>
+</li>
+<li><p><strong>&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#xFF08;accessModes&#xFF09;</strong></p>
+<ul>
+<li>&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x7528;&#x6237;&#x5E94;&#x7528;&#x5BF9;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x5305;&#x62EC;&#x4E0B;&#x9762;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<ul>
+<li>ReadWriteOnce&#xFF08;RWO&#xFF09;&#xFF1A;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x88AB;&#x5355;&#x4E2A;&#x8282;&#x70B9;&#x6302;&#x8F7D;</li>
+<li>ReadOnlyMany&#xFF08;ROX&#xFF09;&#xFF1A; &#x53EA;&#x8BFB;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x6302;&#x8F7D;</li>
+<li>ReadWriteMany&#xFF08;RWX&#xFF09;&#xFF1A;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x6302;&#x8F7D;</li>
+<li>ReadWriteOncePod(RWOP)&#xFF1A;&#x5377;&#x53EA;&#x80FD;&#x7531;&#x5355;&#x4E2A; Pod &#x4EE5;&#x8BFB;&#x5199;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#xFF0C;kubernetes&#x7248;&#x672C;1.22+&#x624D;&#x652F;&#x6301;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5E95;&#x5C42;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x53EF;&#x80FD;&#x652F;&#x6301;&#x7684;&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#x4E0D;&#x540C;</p>
+</blockquote>
+</li>
+<li><p><strong>&#x56DE;&#x6536;&#x7B56;&#x7565;&#xFF08;persistentVolumeReclaimPolicy&#xFF09;</strong></p>
+<p>&#x5F53;PV&#x4E0D;&#x518D;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#x4E4B;&#x540E;&#xFF0C;&#x5BF9;&#x5176;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;&#x4E09;&#x79CD;&#x7B56;&#x7565;&#xFF1A;</p>
+<ul>
+<li>Retain &#xFF08;&#x4FDD;&#x7559;&#xFF09; <strong>&#x4FDD;&#x7559;&#x6570;&#x636E;</strong>&#xFF0C;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x5458;&#x624B;&#x5DE5;&#x6E05;&#x7406;&#x6570;&#x636E;</li>
+<li>Recycle&#xFF08;&#x56DE;&#x6536;&#xFF09; <strong>&#x6E05;&#x9664; PV &#x4E2D;&#x7684;&#x6570;&#x636E;</strong>&#xFF0C;&#x6548;&#x679C;&#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C; rm -rf /thevolume/*</li>
+<li>Delete &#xFF08;&#x5220;&#x9664;&#xFF09; &#x4E0E; PV &#x76F8;&#x8FDE;&#x7684;&#x540E;&#x7AEF;&#x5B58;&#x50A8;&#x5B8C;&#x6210; volume &#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x5E38;&#x89C1;&#x4E8E;&#x4E91;&#x670D;&#x52A1;&#x5546;&#x7684;&#x5B58;&#x50A8;&#x670D;&#x52A1;</li>
+</ul>
+<blockquote>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5E95;&#x5C42;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x53EF;&#x80FD;&#x652F;&#x6301;&#x7684;&#x56DE;&#x6536;&#x7B56;&#x7565;&#x4E0D;&#x540C;</p>
+</blockquote>
+</li>
+<li><p><strong>&#x5B58;&#x50A8;&#x7C7B;&#x522B;</strong></p>
+<p>PV&#x53EF;&#x4EE5;&#x901A;&#x8FC7;storageClassName&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x7C7B;&#x522B;</p>
+<ul>
+<li>&#x5177;&#x6709;&#x7279;&#x5B9A;&#x7C7B;&#x522B;&#x7684;PV&#x53EA;&#x80FD;&#x4E0E;&#x8BF7;&#x6C42;&#x4E86;&#x8BE5;&#x7C7B;&#x522B;&#x7684;PVC&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;</li>
+<li>&#x672A;&#x8BBE;&#x5B9A;&#x7C7B;&#x522B;&#x7684;PV&#x5219;&#x53EA;&#x80FD;&#x4E0E;&#x4E0D;&#x8BF7;&#x6C42;&#x4EFB;&#x4F55;&#x7C7B;&#x522B;&#x7684;PVC&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;</li>
+</ul>
+</li>
+<li><p><strong>&#x72B6;&#x6001;&#xFF08;status&#xFF09;</strong></p>
+<p>&#x4E00;&#x4E2A; PV &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5904;&#x4E8E;4&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x9636;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>Available&#xFF08;&#x53EF;&#x7528;&#xFF09;&#xFF1A; &#x8868;&#x793A;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF0C;&#x8FD8;&#x672A;&#x88AB;&#x4EFB;&#x4F55; PVC &#x7ED1;&#x5B9A;</li>
+<li>Bound&#xFF08;&#x5DF2;&#x7ED1;&#x5B9A;&#xFF09;&#xFF1A; &#x8868;&#x793A; PV &#x5DF2;&#x7ECF;&#x88AB; PVC &#x7ED1;&#x5B9A;</li>
+<li>Released&#xFF08;&#x5DF2;&#x91CA;&#x653E;&#xFF09;&#xFF1A; &#x8868;&#x793A; PVC &#x88AB;&#x5220;&#x9664;&#xFF0C;&#x4F46;&#x662F;&#x8D44;&#x6E90;&#x8FD8;&#x672A;&#x88AB;&#x96C6;&#x7FA4;&#x91CD;&#x65B0;&#x58F0;&#x660E;</li>
+<li>Failed&#xFF08;&#x5931;&#x8D25;&#xFF09;&#xFF1A; &#x8868;&#x793A;&#x8BE5; PV &#x7684;&#x81EA;&#x52A8;&#x56DE;&#x6536;&#x5931;&#x8D25;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x5B9E;&#x9A8C;</strong></p>
+<p>&#x4F7F;&#x7528;NFS&#x4F5C;&#x4E3A;&#x5B58;&#x50A8;&#xFF0C;&#x6765;&#x6F14;&#x793A;PV&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x521B;&#x5EFA;3&#x4E2A;PV&#xFF0C;&#x5BF9;&#x5E94;NFS&#x4E2D;&#x7684;3&#x4E2A;&#x66B4;&#x9732;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>\1) &#x51C6;&#x5907;NFS&#x73AF;&#x5883;</p>
+<pre><code class="lang-shell"># &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+$ mkdir /root/data/{pv1,pv2,pv3} -pv
+mkdir: created directory &apos;/root/data/pv1&apos;
+mkdir: created directory &apos;/root/data/pv2&apos;
+mkdir: created directory &apos;/root/data/pv3&apos;
+
+# &#x66B4;&#x9732;&#x670D;&#x52A1;
+$ vim /etc/exports
+/root/data/pv1  192.168.173.0/24(rw,no_root_squash)
+/root/data/pv2  192.168.173.0/24(rw,no_root_squash)
+/root/data/pv3  192.168.173.0/24(rw,no_root_squash)
+
+# &#x91CD;&#x542F;&#x670D;&#x52A1;
+$ systemctl restart nfs-server
+</code></pre>
+<p>\2) &#x521B;&#x5EFA;pv</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolume
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span>  pv1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  capacity:</span> 
+<span class="hljs-attr">    storage:</span> <span class="hljs-number">1</span>Gi
+<span class="hljs-attr">  accessModes:</span>
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  persistentVolumeReclaimPolicy:</span> Retain
+<span class="hljs-attr">  nfs:</span>
+<span class="hljs-attr">    path:</span> /root/data/pv1
+<span class="hljs-attr">    server:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>
+
+<span class="hljs-meta">---</span>
+
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolume
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span>  pv2
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  capacity:</span> 
+<span class="hljs-attr">    storage:</span> <span class="hljs-number">2</span>Gi
+<span class="hljs-attr">  accessModes:</span>
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  persistentVolumeReclaimPolicy:</span> Retain
+<span class="hljs-attr">  nfs:</span>
+<span class="hljs-attr">    path:</span> /root/data/pv2
+<span class="hljs-attr">    server:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>
+
+<span class="hljs-meta">---</span>
+
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolume
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span>  pv3
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  capacity:</span> 
+<span class="hljs-attr">    storage:</span> <span class="hljs-number">3</span>Gi
+<span class="hljs-attr">  accessModes:</span>
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  persistentVolumeReclaimPolicy:</span> Retain
+<span class="hljs-attr">  nfs:</span>
+<span class="hljs-attr">    path:</span> /root/data/pv3
+<span class="hljs-attr">    server:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>
+<span class="hljs-comment"># &#x521B;&#x5EFA; pv</span>
+$ kubectl create -f pv.yaml
+persistentvolume/pv1 created
+persistentvolume/pv2 created
+persistentvolume/pv3 created
+
+<span class="hljs-comment"># &#x67E5;&#x770B;pv</span>
+$ kubectl get pv
+NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+pv1    <span class="hljs-number">1</span>Gi        RWX            Retain           Available                          &lt;unset&gt;                          <span class="hljs-number">32</span>s
+pv2    <span class="hljs-number">2</span>Gi        RWX            Retain           Available                          &lt;unset&gt;                          <span class="hljs-number">32</span>s
+pv3    <span class="hljs-number">3</span>Gi        RWX            Retain           Available                          &lt;unset&gt;                          <span class="hljs-number">32</span>s
+</code></pre>
+<h2 id="pvc"><a name="pvc" class="anchor-navigation-ex-anchor" href="#pvc"><i class="fa fa-link" aria-hidden="true"></i></a>PVC</h2>
+<p>PVC&#x662F;&#x8D44;&#x6E90;&#x7684;&#x7533;&#x8BF7;&#xFF0C;&#x7528;&#x6765;&#x58F0;&#x660E;&#x5BF9;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3001;&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#x3001;&#x5B58;&#x50A8;&#x7C7B;&#x522B;&#x9700;&#x6C42;&#x4FE1;&#x606F;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x8D44;&#x6E90;&#x6E05;&#x5355;&#x6587;&#x4EF6;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolumeClaim
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pvc
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  accessModes:</span> <span class="hljs-comment"># &#x8BBF;&#x95EE;&#x6A21;&#x5F0F;</span>
+<span class="hljs-attr">  selector:</span> <span class="hljs-comment"># &#x91C7;&#x7528;&#x6807;&#x7B7E;&#x5BF9;PV&#x9009;&#x62E9;</span>
+<span class="hljs-attr">  storageClassName:</span> <span class="hljs-comment"># &#x5B58;&#x50A8;&#x7C7B;&#x522B;</span>
+<span class="hljs-attr">  resources:</span> <span class="hljs-comment"># &#x8BF7;&#x6C42;&#x7A7A;&#x95F4;</span>
+<span class="hljs-attr">    requests:</span>
+<span class="hljs-attr">      storage:</span> <span class="hljs-number">5</span>Gi
+</code></pre>
+<p>PVC &#x7684;&#x5173;&#x952E;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li><strong>&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#xFF08;accessModes&#xFF09;</strong><ul>
+<li>&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x7528;&#x6237;&#x5E94;&#x7528;&#x5BF9;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;</li>
+</ul>
+</li>
+<li><strong>&#x9009;&#x62E9;&#x6761;&#x4EF6;&#xFF08;selector&#xFF09;</strong><ul>
+<li>&#x901A;&#x8FC7;Label Selector&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EF;&#x4F7F;PVC&#x5BF9;&#x4E8E;&#x7CFB;&#x7EDF;&#x4E2D;&#x5DF1;&#x5B58;&#x5728;&#x7684;PV&#x8FDB;&#x884C;&#x7B5B;&#x9009;</li>
+</ul>
+</li>
+<li><strong>&#x5B58;&#x50A8;&#x7C7B;&#x522B;&#xFF08;storageClassName&#xFF09;</strong><ul>
+<li>PVC&#x5728;&#x5B9A;&#x4E49;&#x65F6;&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x9700;&#x8981;&#x7684;&#x540E;&#x7AEF;&#x5B58;&#x50A8;&#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x53EA;&#x6709;&#x8BBE;&#x7F6E;&#x4E86;&#x8BE5;class&#x7684;pv&#x624D;&#x80FD;&#x88AB;&#x7CFB;&#x7EDF;&#x9009;&#x51FA;</li>
+</ul>
+</li>
+<li><strong>&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#xFF08;Resources &#xFF09;</strong><ul>
+<li>&#x63CF;&#x8FF0;&#x5BF9;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x7684;&#x8BF7;&#x6C42;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x5B9E;&#x9A8C;</strong></p>
+<p>\1) &#x521B;&#x5EFA;pvc&#x7533;&#x8BF7;pv</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolumeClaim
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pvc1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  accessModes:</span> 
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  resources:</span>
+<span class="hljs-attr">    requests:</span>
+<span class="hljs-attr">      storage:</span> <span class="hljs-number">1</span>Gi
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolumeClaim
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pvc2
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  accessModes:</span> 
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  resources:</span>
+<span class="hljs-attr">    requests:</span>
+<span class="hljs-attr">      storage:</span> <span class="hljs-number">1</span>Gi
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> PersistentVolumeClaim
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pvc3
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  accessModes:</span> 
+<span class="hljs-bullet">  -</span> ReadWriteMany
+<span class="hljs-attr">  resources:</span>
+<span class="hljs-attr">    requests:</span>
+<span class="hljs-attr">      storage:</span> <span class="hljs-number">1</span>Gi
+<span class="hljs-comment"># &#x521B;&#x5EFA;pvc</span>
+$ kubectl create -f pvc.yaml
+persistentvolumeclaim/pvc1 created
+persistentvolumeclaim/pvc2 created
+persistentvolumeclaim/pvc3 created
+
+<span class="hljs-comment"># &#x67E5;&#x770B;pvc</span>
+$ kubectl get pvc -o wide
+NAME   STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE
+pvc1   Bound    pv1      <span class="hljs-number">1</span>Gi        RWX                           &lt;unset&gt;                 <span class="hljs-number">26</span>s   Filesystem
+pvc2   Bound    pv2      <span class="hljs-number">2</span>Gi        RWX                           &lt;unset&gt;                 <span class="hljs-number">26</span>s   Filesystem
+pvc3   Bound    pv3      <span class="hljs-number">3</span>Gi        RWX                           &lt;unset&gt;                 <span class="hljs-number">26</span>s   Filesystem
+
+<span class="hljs-comment"># &#x67E5;&#x770B;pv</span>
+$ kubectl get pv -o wide
+NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM          STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE   VOLUMEMODE
+pv1    <span class="hljs-number">1</span>Gi        RWX            Retain           Bound    default/pvc1                  &lt;unset&gt;                          <span class="hljs-number">6</span>m    Filesystem
+pv2    <span class="hljs-number">2</span>Gi        RWX            Retain           Bound    default/pvc2                  &lt;unset&gt;                          <span class="hljs-number">6</span>m    Filesystem
+pv3    <span class="hljs-number">3</span>Gi        RWX            Retain           Bound    default/pvc3                  &lt;unset&gt;                          <span class="hljs-number">6</span>m    Filesystem
+</code></pre>
+<p>\2) &#x521B;&#x5EFA;pod, &#x4F7F;&#x7528;pv</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> busybox
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;while true;do echo pod1 &gt;&gt; /root/out.txt; sleep 10; done;&quot;</span>]
+<span class="hljs-attr">    volumeMounts:</span>
+<span class="hljs-attr">    - name:</span> volume
+<span class="hljs-attr">      mountPath:</span> /root/
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">    - name:</span> volume
+<span class="hljs-attr">      persistentVolumeClaim:</span>
+<span class="hljs-attr">        claimName:</span> pvc1
+<span class="hljs-attr">        readOnly:</span> <span class="hljs-literal">false</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod2
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> busybox
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;while true;do echo pod2 &gt;&gt; /root/out.txt; sleep 10; done;&quot;</span>]
+<span class="hljs-attr">    volumeMounts:</span>
+<span class="hljs-attr">    - name:</span> volume
+<span class="hljs-attr">      mountPath:</span> /root/
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">    - name:</span> volume
+<span class="hljs-attr">      persistentVolumeClaim:</span>
+<span class="hljs-attr">        claimName:</span> pvc2
+<span class="hljs-attr">        readOnly:</span> <span class="hljs-literal">false</span>
+<span class="hljs-comment"># &#x67E5;&#x770B;nfs&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5B58;&#x50A8;</span>
+$ more /root/data/pv1/out.txt 
+pod1
+pod1
+pod1
+
+$ more /root/data/pv2/out.txt 
+pod2
+pod2
+pod2
+</code></pre>
+<h3 id="&#x751F;&#x547D;&#x5468;&#x671F;"><a name="&#x751F;&#x547D;&#x5468;&#x671F;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<p>PVC&#x548C;PV&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;PV&#x548C;PVC&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x9075;&#x5FAA;&#x4EE5;&#x4E0B;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;</p>
+<ul>
+<li><strong>&#x8D44;&#x6E90;&#x4F9B;&#x5E94;</strong>&#xFF1A;&#x7BA1;&#x7406;&#x5458;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x5E95;&#x5C42;&#x5B58;&#x50A8;&#x548C;PV</li>
+<li><strong>&#x8D44;&#x6E90;&#x7ED1;&#x5B9A;</strong>&#xFF1A;&#x7528;&#x6237;&#x521B;&#x5EFA;PVC&#xFF0C;kubernetes&#x8D1F;&#x8D23;&#x6839;&#x636E;PVC&#x7684;&#x58F0;&#x660E;&#x53BB;&#x5BFB;&#x627E;PV&#xFF0C;&#x5E76;&#x7ED1;&#x5B9A;<ul>
+<li>&#x5728;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x597D;PVC&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x6839;&#x636E;PVC&#x5BF9;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x7684;&#x8BF7;&#x6C42;&#x5728;&#x5DF2;&#x5B58;&#x5728;&#x7684;PV&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;</li>
+<li>&#x4E00;&#x65E6;&#x627E;&#x5230;&#xFF0C;&#x5C31;&#x5C06;&#x8BE5;PV&#x4E0E;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;PVC&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x5E94;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;PVC&#x4E86;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#xFF0C;PVC&#x5219;&#x4F1A;&#x65E0;&#x9650;&#x671F;&#x5904;&#x4E8E;Pending&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;&#x7B49;&#x5230;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x5176;&#x8981;&#x6C42;&#x7684;PV</li>
+<li>PV&#x4E00;&#x65E6;&#x7ED1;&#x5B9A;&#x5230;&#x67D0;&#x4E2A;PVC&#x4E0A;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x8FD9;&#x4E2A;PVC&#x72EC;&#x5360;&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x4E0E;&#x5176;&#x4ED6;PVC&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x4E86;</li>
+</ul>
+</li>
+<li><strong>&#x8D44;&#x6E90;&#x4F7F;&#x7528;</strong>&#xFF1A;&#x7528;&#x6237;&#x53EF;&#x5728;pod&#x4E2D;&#x50CF;volume&#x4E00;&#x6837;&#x4F7F;&#x7528;pvc<ul>
+<li>Pod&#x4F7F;&#x7528;Volume&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5C06;PVC&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+</li>
+<li><strong>&#x8D44;&#x6E90;&#x91CA;&#x653E;</strong>&#xFF1A;&#x7528;&#x6237;&#x5220;&#x9664;pvc&#x6765;&#x91CA;&#x653E;pv<ul>
+<li>&#x5F53;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5220;&#x9664;PVC&#xFF0C;&#x4E0E;&#x8BE5;PVC&#x7ED1;&#x5B9A;&#x7684;PV&#x5C06;&#x4F1A;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;&#x201C;&#x5DF2;&#x91CA;&#x653E;&#x201D;&#xFF0C;&#x4F46;&#x8FD8;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x4E0E;&#x5176;&#x4ED6;PVC&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;&#x901A;&#x8FC7;&#x4E4B;&#x524D;PVC&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x8FD8;&#x88AB;&#x7559;&#x5728;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x4E0A;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6E05;&#x9664;&#x4E4B;&#x540E;&#x8BE5;PV&#x624D;&#x80FD;&#x518D;&#x6B21;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+</li>
+<li><strong>&#x8D44;&#x6E90;&#x56DE;&#x6536;</strong>&#xFF1A;kubernetes&#x6839;&#x636E;pv&#x8BBE;&#x7F6E;&#x7684;&#x56DE;&#x6536;&#x7B56;&#x7565;&#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x7684;&#x56DE;&#x6536;<ul>
+<li>&#x5BF9;&#x4E8E;PV&#xFF0C;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x56DE;&#x6536;&#x7B56;&#x7565;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x4E0E;&#x4E4B;&#x7ED1;&#x5B9A;&#x7684;PVC&#x91CA;&#x653E;&#x8D44;&#x6E90;&#x4E4B;&#x540E;&#x5982;&#x4F55;&#x5904;&#x7406;&#x9057;&#x7559;&#x6570;&#x636E;&#x7684;&#x95EE;&#x9898;&#x3002;&#x53EA;&#x6709;PV&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5B8C;&#x6210;&#x56DE;&#x6536;&#xFF0C;&#x624D;&#x80FD;&#x4F9B;&#x65B0;&#x7684;PVC&#x7ED1;&#x5B9A;&#x548C;&#x4F7F;&#x7528;</li>
+</ul>
+</li>
+</ul>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240915134128848.png" alt="image-20240915134128848"></p>
+<h1 id="&#x914D;&#x7F6E;&#x5B58;&#x50A8;"><a name="&#x914D;&#x7F6E;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x5B58;&#x50A8;</h1>
+<h2 id="configmap"><a name="configmap" class="anchor-navigation-ex-anchor" href="#configmap"><i class="fa fa-link" aria-hidden="true"></i></a>ConfigMap</h2>
+<p> ConfigMap&#x529F;&#x80FD;&#x5728;Kubernetes1.2&#x7248;&#x672C;&#x4E2D;&#x5F15;&#x5165;&#xFF0C;&#x8BB8;&#x591A;&#x5E94;&#x2F64;&#x7A0B;&#x5E8F;&#x4F1A;&#x4ECE;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3001;&#x547D;&#x4EE4;&#x2F8F;&#x53C2;&#x6570;&#x6216;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;ConfigMapAPI&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5411;&#x5BB9;&#x5668;&#x4E2D;&#x6CE8;&#x5165;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x7684;&#x673A;&#x5236;&#xFF0C;ConfigMap&#x53EF;&#x4EE5;&#x88AB;&#x2F64;&#x6765;&#x4FDD;&#x5B58;&#x5355;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x2F64;&#x6765;&#x4FDD;&#x5B58;&#x6574;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6216;&#x8005;JSON&#x2F06;&#x8FDB;&#x5236;&#x7B49;&#x5BF9;&#x8C61;</p>
+<p><img src="08.&#x6570;&#x636E;&#x5B58;&#x50A8;.assets/image-20240916131412493.png" alt="image-20240916131412493"></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA;configMag</span>
+$ kubectl create configmap myconfig --from-file=myconfig.conf
+
+<span class="hljs-comment"># myconfig.conf&#x6587;&#x4EF6;&#x5185;&#x5BB9;</span>
+username=admin
+password=12345
+
+<span class="hljs-comment"># &#x901A;&#x8FC7;&#x9009;&#x9879;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x5185;&#x5BB9;</span>
+$ kubectl create configmap myconfig myconfig --from-literal=username=admin --from-literal=password=12345
+</code></pre>
+<p>ConfigMap&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+<li>&#x6CE8;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<h3 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> ConfigMap
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> literal-config
+<span class="hljs-attr">  namespace:</span> default
+<span class="hljs-attr">data:</span>
+<span class="hljs-attr">  name:</span> admin
+<span class="hljs-attr">  password:</span> <span class="hljs-string">&quot;123456&quot;</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> ConfigMap
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> env-config
+<span class="hljs-attr">  namespace:</span> default
+<span class="hljs-attr">data:</span>
+<span class="hljs-attr">  log_level:</span> INFO
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> cm-env-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">    - name:</span> myapp-container
+<span class="hljs-attr">      image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">      command:</span> [ <span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;env&quot;</span> ]
+<span class="hljs-attr">      env:</span>
+<span class="hljs-attr">        - name:</span> USERNAME
+<span class="hljs-attr">          valueFrom:</span>
+<span class="hljs-attr">            configMapKeyRef:</span>
+<span class="hljs-attr">              name:</span> literal-config
+<span class="hljs-attr">              key:</span> name
+<span class="hljs-attr">        - name:</span> PASSWORD
+<span class="hljs-attr">          valueFrom:</span>
+<span class="hljs-attr">            configMapKeyRef:</span>
+<span class="hljs-attr">              name:</span> literal-config
+<span class="hljs-attr">              key:</span> password
+<span class="hljs-attr">      envFrom:</span>
+<span class="hljs-attr">        - configMapRef:</span>
+<span class="hljs-attr">            name:</span> env-config
+<span class="hljs-attr">  restartPolicy:</span> Never
+</code></pre>
+<p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-bash">$ kubectl logs cm-env-pod
+USERNAME=admin
+<span class="hljs-built_in">log</span>_level=INFO
+PASSWORD=123456
+</code></pre>
+<h3 id="&#x6587;&#x4EF6;&#x6302;&#x8F7D;"><a name="&#x6587;&#x4EF6;&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x6302;&#x8F7D;</h3>
+<p>&#x5C06;ConfigMap&#x5F53;&#x505A;&#x6587;&#x4EF6;&#x6302;&#x8F7D;&#x5230;pod&#x4E2D;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> ConfigMap
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> literal-config
+<span class="hljs-attr">  namespace:</span> default
+<span class="hljs-attr">data:</span>
+<span class="hljs-attr">  name:</span> admin
+<span class="hljs-attr">  password:</span> <span class="hljs-string">&quot;123456&quot;</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> cm-volume-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">    - name:</span> myapp-container
+<span class="hljs-attr">      image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">      volumeMounts:</span>
+<span class="hljs-attr">      - name:</span> config-volume
+<span class="hljs-attr">        mountPath:</span> /etc/config
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">    - name:</span> config-volume
+<span class="hljs-attr">      configMap:</span>
+<span class="hljs-attr">        name:</span> literal-config
+<span class="hljs-attr">  restartPolicy:</span> Never
+$ kubectl exec -it cm-volume-pod -c myapp-container -- /bin/bash
+root@cm-volume-pod:/<span class="hljs-comment"># ls /etc/config/</span>
+name  password
+root@cm-volume-pod:/<span class="hljs-comment"># ls -l /etc/config</span>
+total <span class="hljs-number">0</span>
+lrwxrwxrwx <span class="hljs-number">1</span> root root <span class="hljs-number">11</span> Sep <span class="hljs-number">16</span> <span class="hljs-number">05</span>:<span class="hljs-number">35</span> name -&gt; ..data/name
+lrwxrwxrwx <span class="hljs-number">1</span> root root <span class="hljs-number">15</span> Sep <span class="hljs-number">16</span> <span class="hljs-number">05</span>:<span class="hljs-number">35</span> password -&gt; ..data/password
+</code></pre>
+<h3 id="&#x70ED;&#x66F4;&#x65B0;"><a name="&#x70ED;&#x66F4;&#x65B0;" class="anchor-navigation-ex-anchor" href="#&#x70ED;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x70ED;&#x66F4;&#x65B0;</h3>
+<p>&#x7F16;&#x5199;&#x4E00;&#x4E2A;nginx&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">$ cat default.conf 
+server {
+    listen 80 default_server;
+    server_name example.com www.example.com;
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+     }
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;configmap</p>
+<pre><code class="lang-bash">$ kubectl create cm default-nginx --from-file=default.conf
+
+$ kubectl describe cm default-nginx
+Name:         default-nginx
+Namespace:    default
+Labels:       &lt;none&gt;
+Annotations:  &lt;none&gt;
+
+Data
+====
+default.conf:
+----
+server {
+    listen 80 default_server;
+    server_name example.com www.example.com;
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+     }
+}
+
+
+BinaryData
+====
+
+Events:  &lt;none&gt;
+</code></pre>
+<p>&#x521B;&#x5EFA;nginx&#x7684;deployment&#x63A7;&#x5236;&#x5668;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> apps/v1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> hotupdate-deploy
+<span class="hljs-attr">  name:</span> hotupdate-deploy
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">5</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> hotupdate-deploy
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        app:</span> hotupdate-deploy
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">        name:</span> nginx
+<span class="hljs-attr">        volumeMounts:</span>
+<span class="hljs-attr">        - name:</span> config-volume
+<span class="hljs-attr">          mountPath:</span> /etc/nginx/conf.d/
+<span class="hljs-attr">      volumes:</span>
+<span class="hljs-attr">        - name:</span> config-volume
+<span class="hljs-attr">          configMap:</span>
+<span class="hljs-attr">            name:</span> default-nginx
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x68C0;&#x67E5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it hotupdate-deploy-b548444d4-54r88 -- /bin/bash
+root@hotupdate-deploy-b548444d4-54r88:/<span class="hljs-comment"># cat /etc/nginx/conf.d/default.conf </span>
+server {
+    listen 80 default_server;
+    server_name example.com www.example.com;
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+     }
+}
+</code></pre>
+<p>&#x4FEE;&#x6539;configmap&#x4E2D;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x914D;&#x7F6E;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4FEE;&#x6539;nginx&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;8080</span>
+$ kubectl edit cm default-nginx
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it hotupdate-deploy-b548444d4-54r88 -- /bin/bash
+root@hotupdate-deploy-b548444d4-54r88:/<span class="hljs-comment"># cat /etc/nginx/conf.d/default.conf</span>
+server {
+    listen 8080 default_server;
+    server_name example.com www.example.com;
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+     }
+}
+
+<span class="hljs-comment"># &#x8BBF;&#x95EE;8080&#x7AEF;&#x53E3;&#xFF0C;&#x53D1;&#x73B0;&#x5E76;&#x672A;&#x751F;&#x6548;</span>
+$ curl 10.244.196.166
+Myapp Version 1.0
+
+$ curl 10.244.196.166:8080
+curl: (7) Failed to connect to 10.244.196.166 port 8080: Connection refused
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;pod annotations&#x7684;&#x2F45;&#x5F0F;&#x5F3A;&#x5236;&#x89E6;&#x53D1;&#x6EDA;&#x52A8;&#x66F4;&#x65B0;</p>
+<pre><code class="lang-bash">$ kubectl patch deployment hotupdate-deploy --patch <span class="hljs-string">&apos;{&quot;spec&quot;: {&quot;template&quot;: {&quot;metadata&quot;: {&quot;annotations&quot;: {&quot;version/config&quot;: &quot;v1.0&quot; }}}}}&apos;</span>
+
+$ kubectl get pod
+NAME                                READY   STATUS        RESTARTS   AGE
+hotupdate-deploy-7995cdc7dc-2bqvp   1/1     Running       0          7s
+hotupdate-deploy-7995cdc7dc-7s5vt   1/1     Running       0          6s
+hotupdate-deploy-7995cdc7dc-b5mpx   1/1     Running       0          8s
+hotupdate-deploy-7995cdc7dc-bwr5q   1/1     Running       0          8s
+hotupdate-deploy-7995cdc7dc-xlvtc   1/1     Running       0          8s
+hotupdate-deploy-b548444d4-54r88    1/1     Terminating   0          5m19s
+hotupdate-deploy-b548444d4-kgnk7    1/1     Terminating   0          5m19s
+hotupdate-deploy-b548444d4-pg2jm    1/1     Terminating   0          5m19s
+hotupdate-deploy-b548444d4-tlm8d    1/1     Terminating   0          5m19s
+hotupdate-deploy-b548444d4-zbrq4    1/1     Terminating   0          5m19s
+
+$ curl 10.244.140.115:8080
+Myapp Version 1.0
+</code></pre>
+<p>&#x66F4;&#x65B0;ConfigMap&#x540E;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x2F64;&#x8BE5;ConfigMap&#x6302;&#x8F7D;&#x7684;Env&#x4E0D;&#x4F1A;&#x540C;&#x6B65;&#x66F4;&#x65B0;</li>
+<li>&#x4F7F;&#x2F64;&#x8BE5;ConfigMap&#x6302;&#x8F7D;&#x7684;Volume&#x4E2D;&#x7684;&#x6570;&#x636E;&#x9700;&#x8981;&#x2F00;&#x6BB5;&#x65F6;&#x95F4;&#xFF08;&#x5B9E;&#x6D4B;&#x2F24;&#x6982;10&#x79D2;&#xFF09;&#x624D;&#x80FD;&#x540C;&#x6B65;&#x66F4;&#x65B0;</li>
+</ul>
+<h3 id="&#x4E0D;&#x53EF;&#x53D8;configmap"><a name="&#x4E0D;&#x53EF;&#x53D8;configmap" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x53EF;&#x53D8;configmap"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0D;&#x53EF;&#x53D8;configmap</h3>
+<p>Kubernetes&#x7ED9;&#x4E0D;&#x53EF;&#x53D8;&#x7684;ConfigMap&#x548C;Secret&#x63D0;&#x4F9B;&#x4E86;&#x2F00;&#x79CD;&#x53EF;&#x9009;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5404;&#x4E2A;Secret&#x548C;ConfigMap&#x4E3A;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x2F24;&#x91CF;&#x4F7F;&#x2F64;configmap&#x7684;&#x96C6;&#x7FA4;&#xFF08;&#x2F84;&#x5C11;&#x6709;&#x6210;&#x5343;&#x4E0A;&#x4E07;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#x7684;configmap&#x4F9B;Pod&#x6302;&#x8F7D;&#xFF09;&#xFF0C;&#x7981;&#x2F4C;&#x53D8;&#x66F4;&#x5B83;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x6709;&#x4E0B;&#x5217;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x9632;&#x2F4C;&#x610F;&#x5916;&#xFF08;&#x6216;&#x975E;&#x9884;&#x671F;&#x7684;&#xFF09;&#x66F4;&#x65B0;&#x5BFC;&#x81F4;&#x5E94;&#x2F64;&#x7A0B;&#x5E8F;&#x4E2D;&#x65AD;</li>
+<li>&#x901A;&#x8FC7;&#x5C06;configmap&#x6807;&#x8BB0;&#x4E3A;&#x4E0D;&#x53EF;&#x53D8;&#x6765;&#x5173;&#x95ED;kube-apiserver&#x5BF9;&#x5176;&#x7684;&#x76D1;&#x89C6;&#xFF0C;&#x4ECE;&#x2F7D;&#x663E;&#x8457;&#x964D;&#x4F4E;kube-apiserver&#x7684;&#x8D1F;&#x8F7D;&#xFF0C;&#x63D0;&#x5347;&#x96C6;&#x7FA4;&#x6027;&#x80FD;&#x3002;</li>
+</ul>
+<pre><code class="lang-bash">$ kubectl explain cm
+KIND:       ConfigMap
+VERSION:    v1
+
+DESCRIPTION:
+    ConfigMap holds configuration data <span class="hljs-keyword">for</span> pods to consume.
+
+FIELDS:
+  immutable     &lt;boolean&gt;
+    Immutable, <span class="hljs-keyword">if</span> <span class="hljs-built_in">set</span> to <span class="hljs-literal">true</span>, ensures that data stored <span class="hljs-keyword">in</span> the ConfigMap cannot
+    be updated (only object metadata can be modified). If not <span class="hljs-built_in">set</span> to <span class="hljs-literal">true</span>, the
+    field can be modified at any time. Defaulted to nil.
+</code></pre>
+<h2 id="secret"><a name="secret" class="anchor-navigation-ex-anchor" href="#secret"><i class="fa fa-link" aria-hidden="true"></i></a>Secret</h2>
+<p>Secret&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x2F64;&#x6765;&#x4FDD;&#x5B58;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x5BC6;&#x7801;&#x3001;OAuth&#x4EE4;&#x724C;&#x548C;SSH&#x5BC6;&#x94A5;&#x3002;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x653E;&#x5728;secret&#x4E2D;&#x6BD4;&#x653E;&#x5728;Pod&#x7684;&#x5B9A;&#x4E49;&#x6216;&#x8005;&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x4E2D;&#x6765;&#x8BF4;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#x548C;&#x7075;&#x6D3B;&#x3002;</p>
+<ul>
+<li>Kubernetes&#x901A;&#x8FC7;&#x4EC5;&#x4EC5;&#x5C06;Secret&#x5206;&#x53D1;&#x5230;&#x9700;&#x8981;&#x8BBF;&#x95EE;Secret&#x7684;Pod&#x6240;&#x5728;&#x7684;&#x673A;&#x5668;&#x8282;&#x70B9;&#x6765;&#x4FDD;&#x969C;&#x5176;&#x5B89;&#x5168;&#x6027;</li>
+<li>Secret&#x53EA;&#x4F1A;&#x5B58;&#x50A8;&#x5728;&#x8282;&#x70B9;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x6C38;&#x4E0D;&#x5199;&#x5165;&#x7269;&#x7406;&#x5B58;&#x50A8;&#xFF0C;&#x8FD9;&#x6837;&#x4ECE;&#x8282;&#x70B9;&#x5220;&#x9664;secret&#x65F6;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x64E6;&#x9664;&#x78C1;&#x76D8;&#x6570;&#x636E;</li>
+<li>&#x4ECE;Kubernetes1.7&#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;etcd&#x4F1A;&#x4EE5;&#x52A0;&#x5BC6;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;Secret&#xFF0C;&#x2F00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x4FDD;&#x8BC1;&#x4E86;Secret&#x5B89;&#x5168;&#x6027;</li>
+<li>Secret&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x6709;&#x5982;&#x4E0B;&#x8868;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5185;&#x7F6E;&#x7C7B;&#x578B;</th>
+<th>&#x7528;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opaque</td>
+<td>&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x4EFB;&#x610F;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>kubernetes.io/service-account-token</td>
+<td>&#x670D;&#x52A1;&#x8D26;&#x53F7;&#x4EE4;&#x724C;</td>
+</tr>
+<tr>
+<td>kubernetes.io/dockercfg</td>
+<td>~/.dockercfg&#x6587;&#x4EF6;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x5F62;&#x5F0F;</td>
+</tr>
+<tr>
+<td>kubernetes.io/dockerconfigjson</td>
+<td>~/.docker/config.json&#x6587;&#x4EF6;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x5F62;&#x5F0F;</td>
+</tr>
+<tr>
+<td>kubernetes.io/basic-auth</td>
+<td>&#x7528;&#x4E8E;&#x57FA;&#x672C;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x7684;&#x51ED;&#x636E;</td>
+</tr>
+<tr>
+<td>kubernetes.io/ssh-auth</td>
+<td>&#x7528;&#x4E8E;SSH&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x7684;&#x51ED;&#x636E;</td>
+</tr>
+<tr>
+<td>kubernetes.io/tls</td>
+<td>&#x7528;&#x4E8E;TLS&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x8005;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>bootstrap.kubernetes.io/token</td>
+<td>&#x542F;&#x52A8;&#x5F15;&#x5BFC;&#x4EE4;&#x724C;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F53;Secret&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x672A;&#x4F5C;&#x663E;&#x5F0F;&#x8BBE;&#x5B9A;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;Secret&#x7C7B;&#x578B;&#x662F;Opaque&#x3002;&#x5F53;&#x4F60;&#x4F7F;&#x2F64;kubectl&#x6765;&#x521B;&#x5EFA;&#x2F00;&#x4E2A;Secret&#x65F6;&#xFF0C;&#x4F60;&#x4F1A;&#x4F7F;&#x2F64;generic&#x2F26;&#x547D;&#x4EE4;&#x6765;&#x6807;&#x660E;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x662F;&#x2F00;&#x4E2A;Opaque&#x7C7B;&#x578B;Secret&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B58;&#x5165;secret&#x4E2D;&#x7684;&#x6570;&#x636E;&#x9700;&#x8981;base64&#x7F16;&#x7801;</span>
+$ <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;admin&quot;</span> | base64
+YWRtaW4=
+$ <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;123456&quot;</span> | base64
+MTIzNDU2
+
+<span class="hljs-comment"># base64&#x53EF;&#x4EE5;&#x8F7B;&#x6613;&#x7684;&#x88AB;&#x89E3;&#x7801;</span>
+$ <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;YWRtaW4=&quot;</span> | base64 <span class="hljs-_">-d</span>
+admin
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;secret&#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Secret
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> mysecret
+<span class="hljs-attr">type:</span> Opaque
+<span class="hljs-attr">data:</span>
+<span class="hljs-attr">  password:</span> MTIzNDU2
+<span class="hljs-attr">  username:</span> YWRtaW4=
+</code></pre>
+<p>&#x67E5;&#x770B;&#x8D44;&#x6E90;&#x521B;&#x5EFA;</p>
+<pre><code class="lang-bash">$ kubectl get secret
+NAME         TYPE                DATA   AGE
+mysecret     Opaque              2      22s
+
+$ kubectl describe secret mysecret
+Name:         mysecret
+Namespace:    default
+Labels:       &lt;none&gt;
+Annotations:  &lt;none&gt;
+
+Type:  Opaque
+
+Data
+====
+password:  6 bytes
+username:  5 bytes
+
+$ kubectl get secret mysecret -o yaml
+apiVersion: v1
+data:
+  password: MTIzNDU2
+  username: YWRtaW4=
+kind: Secret
+metadata:
+  creationTimestamp: <span class="hljs-string">&quot;2024-09-16T06:05:59Z&quot;</span>
+  name: mysecret
+  namespace: default
+  resourceVersion: <span class="hljs-string">&quot;676071&quot;</span>
+  uid: 30896725-6713-491f-b779-ce75f7e6312e
+<span class="hljs-built_in">type</span>: Opaque
+</code></pre>
+<h3 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;_1"><a name="&#x73AF;&#x5883;&#x53D8;&#x91CF;_1" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> apps/v1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr"> labels:</span>
+<span class="hljs-attr">   app:</span> opaque-secret-env
+<span class="hljs-attr"> name:</span> opaque-secret-env-deploy
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr"> replicas:</span> <span class="hljs-number">5</span>
+<span class="hljs-attr"> selector:</span>
+<span class="hljs-attr">   matchLabels:</span>
+<span class="hljs-attr">     app:</span> op-se-env-pod
+<span class="hljs-attr"> template:</span>
+<span class="hljs-attr">   metadata:</span>
+<span class="hljs-attr">     labels:</span>
+<span class="hljs-attr">       app:</span> op-se-env-pod
+<span class="hljs-attr">   spec:</span>
+<span class="hljs-attr">     containers:</span>
+<span class="hljs-attr">     - image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">       name:</span> myapp-continaer
+<span class="hljs-attr">       ports:</span>
+<span class="hljs-attr">       - containerPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">       env:</span>
+<span class="hljs-attr">       - name:</span> TEST_USER
+<span class="hljs-attr">         valueFrom:</span>
+<span class="hljs-attr">           secretKeyRef:</span>
+<span class="hljs-attr">             name:</span> mysecret
+<span class="hljs-attr">             key:</span> username
+<span class="hljs-attr">       - name:</span> TEST_PASSWORD
+<span class="hljs-attr">         valueFrom:</span>
+<span class="hljs-attr">           secretKeyRef:</span>
+<span class="hljs-attr">             name:</span> mysecret
+<span class="hljs-attr">             key:</span> password
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x73AF;&#x5883;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it opaque-secret-env-deploy-6b5b66b9db-292zl -- /bin/bash
+root@opaque-secret-env-deploy-6b5b66b9db-292zl:/<span class="hljs-comment"># env</span>
+TEST_USER=admin
+TEST_PASSWORD=123456
+</code></pre>
+<h3 id="&#x6587;&#x4EF6;&#x6302;&#x8F7D;_1"><a name="&#x6587;&#x4EF6;&#x6302;&#x8F7D;_1" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x6302;&#x8F7D;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x6302;&#x8F7D;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> secret-volume
+<span class="hljs-attr">  name:</span> secret-volume-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">  - name:</span> volumes12
+<span class="hljs-attr">    secret:</span>
+<span class="hljs-attr">      secretName:</span> mysecret
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">    name:</span> myapp-container
+<span class="hljs-attr">    volumeMounts:</span>
+<span class="hljs-attr">    - name:</span> volumes12
+<span class="hljs-attr">      mountPath:</span> <span class="hljs-string">&quot;/data&quot;</span>
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-bash">kubectl <span class="hljs-built_in">exec</span> -it secret-volume-pod -- /bin/bash
+root@secret-volume-pod:/<span class="hljs-comment"># ls /data/</span>
+password  username
+root@secret-volume-pod:/<span class="hljs-comment"># ls -l /data/</span>
+total 0
+lrwxrwxrwx 1 root root 15 Sep 16 06:17 password -&gt; ..data/password
+lrwxrwxrwx 1 root root 15 Sep 16 06:17 username -&gt; ..data/username
+root@secret-volume-pod:/<span class="hljs-comment"># cat /data/password </span>
+123456
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6302;&#x8F7D;&#x540E;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># &#x4FEE;&#x6539;&#x6743;&#x9650;&#xFF0C;256&#x7684;&#x516B;&#x8FDB;&#x5236;&#x662F;400</span>
+<span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">  - name:</span> volumes12
+<span class="hljs-attr">    secret:</span>
+<span class="hljs-attr">      secretName:</span> mysecret
+<span class="hljs-attr">      defaultMode:</span> <span class="hljs-number">256</span>
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x6743;&#x9650;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it secret-volume-pod -- /bin/bash
+root@secret-volume-pod:/data/..data<span class="hljs-comment"># ls -l</span>
+total 8
+-r-------- 1 root root 12 Sep 16 06:22 password
+-r-------- 1 root root  5 Sep 16 06:22 username
+</code></pre>
+<p>&#x6307;&#x5B9A;&#x53EA;&#x9700;&#x8981;&#x7684;&#x952E;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">  volumes:</span>
+<span class="hljs-attr">  - name:</span> volumes12
+<span class="hljs-attr">    secret:</span>
+<span class="hljs-attr">      secretName:</span> mysecret
+<span class="hljs-attr">      items:</span>
+<span class="hljs-attr">      - key:</span> username
+<span class="hljs-attr">        path:</span> my-group/my-username
+</code></pre>
+<p>&#x9A8C;&#x8BC1;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it secret-volume-pod -- /bin/bash
+root@secret-volume-pod:/<span class="hljs-comment"># ls -l /data/</span>
+total 0
+lrwxrwxrwx 1 root root 15 Sep 16 06:26 my-group -&gt; ..data/my-group
+</code></pre>
+<p>&#x5B66;&#x524D;&#x6CBF;IT&#xFF0C;&#x5230;&#x82F1;&#x683C;&#x79D1;&#x6280;!&#x672C;&#x6587;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A; 2025-03-30 23:07:56</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../07.Service/07.Service.html" class="navigation navigation-prev " aria-label="Previous page: 07.Service">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../09.调度器/09.调度器.html" class="navigation navigation-next " aria-label="Next page: 09.调度器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08.数据存储","level":"1.2.8","depth":2,"next":{"title":"09.调度器","level":"1.2.9","depth":2,"path":"09.调度器/09.调度器.md","ref":"09.调度器/09.调度器.md","articles":[]},"previous":{"title":"07.Service","level":"1.2.7","depth":2,"path":"07.Service/07.Service.md","ref":"07.Service/07.Service.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","theme-comscore","hide-element","code","-lunr","-search","search-pro","-sharing","sharing-plus","ancre-navigation","wide-page","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search-pro":{},"wide-page":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"08.数据存储/08.数据存储.md","mtime":"2025-06-24T01:11:16.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-27T09:24:02.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

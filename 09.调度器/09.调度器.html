@@ -1,0 +1,866 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>09.调度器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10.安全认证/10.安全认证.html" />
+    
+    
+    <link rel="prev" href="../08.数据存储/08.数据存储.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    01.kubernetes概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../02.Pod与网络/02.Pod与网络.html">
+            
+                <a href="../02.Pod与网络/02.Pod与网络.html">
+            
+                    
+                    02.Pod与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../03.安装手册/03.安装手册.html">
+            
+                <a href="../03.安装手册/03.安装手册.html">
+            
+                    
+                    03.安装手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../04.资源清单/04.资源清单.html">
+            
+                <a href="../04.资源清单/04.资源清单.html">
+            
+                    
+                    04.资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                <a href="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                    
+                    05.Pod生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../06.Pod控制器/06.Pod控制器.html">
+            
+                <a href="../06.Pod控制器/06.Pod控制器.html">
+            
+                    
+                    06.Pod控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../07.Service/07.Service.html">
+            
+                <a href="../07.Service/07.Service.html">
+            
+                    
+                    07.Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../08.数据存储/08.数据存储.html">
+            
+                <a href="../08.数据存储/08.数据存储.html">
+            
+                    
+                    08.数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="09.调度器.html">
+            
+                <a href="09.调度器.html">
+            
+                    
+                    09.调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../10.安全认证/10.安全认证.html">
+            
+                <a href="../10.安全认证/10.安全认证.html">
+            
+                    
+                    10.安全认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../11.DashBoard/11.DashBoard.html">
+            
+                <a href="../11.DashBoard/11.DashBoard.html">
+            
+                    
+                    11.DashBoard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >09.调度器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#09&#x8C03;&#x5EA6;&#x5668;"><b></b>09.&#x8C03;&#x5EA6;&#x5668;</a></li><li><span class="title-icon "></span><a href="#pod&#x8C03;&#x5EA6;"><b></b>Pod&#x8C03;&#x5EA6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9A;&#x5411;&#x8C03;&#x5EA6;"><b></b>&#x5B9A;&#x5411;&#x8C03;&#x5EA6;</a></li><ul><li><span class="title-icon "></span><a href="#nodename"><b></b>NodeName</a></li><li><span class="title-icon "></span><a href="#nodeselector"><b></b>NodeSelector</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;"><b></b>&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;</a></li><ul><li><span class="title-icon "></span><a href="#nodeaffinity"><b></b>NodeAffinity</a></li><li><span class="title-icon "></span><a href="#podaffinity"><b></b>PodAffinity</a></li><li><span class="title-icon "></span><a href="#podantiaffinity"><b></b>PodAntiAffinity</a></li></ul><li><span class="title-icon "></span><a href="#&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;"><b></b>&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;</a></li></ul></ul></div><a href="#09&#x8C03;&#x5EA6;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="09&#x8C03;&#x5EA6;&#x5668;"><a name="09&#x8C03;&#x5EA6;&#x5668;" class="anchor-navigation-ex-anchor" href="#09&#x8C03;&#x5EA6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>09.&#x8C03;&#x5EA6;&#x5668;</h1>
+<h1 id="pod&#x8C03;&#x5EA6;"><a name="pod&#x8C03;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#pod&#x8C03;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>Pod&#x8C03;&#x5EA6;</h1>
+<p>&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;Pod&#x5728;&#x54EA;&#x4E2A;Node&#x8282;&#x70B9;&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x662F;&#x7531;Scheduler&#x7EC4;&#x4EF6;&#x91C7;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x7B97;&#x6CD5;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x662F;&#x4E0D;&#x53D7;&#x4EBA;&#x5DE5;&#x63A7;&#x5236;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x8FD9;&#x5E76;&#x4E0D;&#x6EE1;&#x8DB3;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x63A7;&#x5236;&#x67D0;&#x4E9B;Pod&#x5230;&#x8FBE;&#x67D0;&#x4E9B;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x8981;&#x6C42;&#x4E86;&#x89E3;kubernetes&#x5BF9;Pod&#x7684;&#x8C03;&#x5EA6;&#x89C4;&#x5219;&#xFF0C;kubernetes&#x63D0;&#x4F9B;&#x4E86;&#x56DB;&#x5927;&#x7C7B;&#x8C03;&#x5EA6;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x52A8;&#x8C03;&#x5EA6;&#xFF1A;&#x8FD0;&#x884C;&#x5728;&#x54EA;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x5B8C;&#x5168;&#x7531;Scheduler&#x7ECF;&#x8FC7;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x7B97;&#x6CD5;&#x8BA1;&#x7B97;&#x5F97;&#x51FA;</li>
+<li>&#x5B9A;&#x5411;&#x8C03;&#x5EA6;&#xFF1A;NodeName&#x3001;NodeSelector</li>
+<li>&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;&#xFF1A;NodeAffinity&#x3001;PodAffinity&#x3001;PodAntiAffinity</li>
+<li>&#x6C61;&#x70B9;&#xFF08;&#x5BB9;&#x5FCD;&#xFF09;&#x8C03;&#x5EA6;&#xFF1A;Taints&#x3001;Toleration</li>
+</ul>
+<h2 id="&#x5B9A;&#x5411;&#x8C03;&#x5EA6;"><a name="&#x5B9A;&#x5411;&#x8C03;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x5411;&#x8C03;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x5411;&#x8C03;&#x5EA6;</h2>
+<p>&#x5B9A;&#x5411;&#x8C03;&#x5EA6;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x5229;&#x7528;&#x5728;pod&#x4E0A;&#x58F0;&#x660E;nodeName&#x6216;&#x8005;nodeSelector&#xFF0C;&#x4EE5;&#x6B64;&#x5C06;Pod&#x8C03;&#x5EA6;&#x5230;&#x671F;&#x671B;&#x7684;node&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x8C03;&#x5EA6;&#x662F;&#x5F3A;&#x5236;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5373;&#x4F7F;&#x8981;&#x8C03;&#x5EA6;&#x7684;&#x76EE;&#x6807;Node&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x4E5F;&#x4F1A;&#x5411;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;pod&#x8FD0;&#x884C;&#x5931;&#x8D25;&#x800C;&#x5DF2;&#x3002;</p>
+<h3 id="nodename"><a name="nodename" class="anchor-navigation-ex-anchor" href="#nodename"><i class="fa fa-link" aria-hidden="true"></i></a><strong>NodeName</strong></h3>
+<p>NodeName&#x7528;&#x4E8E;&#x5F3A;&#x5236;&#x7EA6;&#x675F;&#x5C06;Pod&#x8C03;&#x5EA6;&#x5230;&#x6307;&#x5B9A;&#x7684;Name&#x7684;Node&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;Scheduler&#x7684;&#x8C03;&#x5EA6;&#x903B;&#x8F91;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;Pod&#x8C03;&#x5EA6;&#x5230;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5B9E;&#x9A8C;&#x4E00;&#x4E0B;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;pod-nodename.yaml&#x6587;&#x4EF6;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-nodename
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  nodeName:</span> node01 <span class="hljs-comment"># &#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x5230;nodem01&#x8282;&#x70B9;&#x4E0A;</span>
+<span class="hljs-comment">#&#x67E5;&#x770B;Pod&#x8C03;&#x5EA6;&#x5230;NODE&#x5C5E;&#x6027;&#xFF0C;&#x786E;&#x5B9E;&#x662F;&#x8C03;&#x5EA6;&#x5230;&#x4E86;node01&#x8282;&#x70B9;&#x4E0A;</span>
+$ kubectl get pods pod-nodename -o wide
+NAME           READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+pod-nodename   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">62</span>s   <span class="hljs-number">10.244</span><span class="hljs-number">.196</span><span class="hljs-number">.188</span>   node01   &lt;none&gt;           &lt;none<span class="hljs-string">&gt; 
+
+# &#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5220;&#x9664;pod&#xFF0C;&#x4FEE;&#x6539;nodeName&#x7684;&#x503C;&#x4E3A;node03&#xFF08;&#x5E76;&#x6CA1;&#x6709;node03&#x8282;&#x70B9;&#xFF09;
+#&#x518D;&#x6B21;&#x67E5;&#x770B;&#xFF0C;&#x53D1;&#x73B0;&#x5DF2;&#x7ECF;&#x5411;Node03&#x8282;&#x70B9;&#x8C03;&#x5EA6;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x4E0D;&#x5B58;&#x5728;node03&#x8282;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;pod&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;
+$ kubectl get pods pod-nodename -o wide
+NAME           READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
+pod-nodename   0/1     Pending   0          10s   &lt;none&gt;   node03   &lt;none&gt;           &lt;none&gt;
+</span></code></pre>
+<h3 id="nodeselector"><a name="nodeselector" class="anchor-navigation-ex-anchor" href="#nodeselector"><i class="fa fa-link" aria-hidden="true"></i></a><strong>NodeSelector</strong></h3>
+<p>NodeSelector&#x7528;&#x4E8E;&#x5C06;pod&#x8C03;&#x5EA6;&#x5230;&#x6DFB;&#x52A0;&#x4E86;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;node&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x5B83;&#x662F;&#x901A;&#x8FC7;kubernetes&#x7684;label-selector&#x673A;&#x5236;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;pod&#x521B;&#x5EFA;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x7531;scheduler&#x4F7F;&#x7528;MatchNodeSelector&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x8FDB;&#x884C;label&#x5339;&#x914D;&#xFF0C;&#x627E;&#x51FA;&#x76EE;&#x6807;node&#xFF0C;&#x7136;&#x540E;&#x5C06;pod&#x8C03;&#x5EA6;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF0C;&#x8BE5;&#x5339;&#x914D;&#x89C4;&#x5219;&#x662F;&#x5F3A;&#x5236;&#x7EA6;&#x675F;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5B9E;&#x9A8C;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p>1 &#x9996;&#x5148;&#x5206;&#x522B;&#x4E3A;node&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;</p>
+<pre><code class="lang-shell">$ kubectl label nodes node01 nodeenv=pro
+node/node02 labeled
+$ kubectl label nodes node02 nodeenv=test
+node/node02 labeled
+</code></pre>
+<p>2 &#x521B;&#x5EFA;&#x4E00;&#x4E2A;pod-nodeselector.yaml&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5B83;&#x521B;&#x5EFA;Pod</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-nodeselector
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  nodeSelector:</span> 
+<span class="hljs-attr">    nodeenv:</span> pro <span class="hljs-comment"># &#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x5230;&#x5177;&#x6709;nodeenv=pro&#x6807;&#x7B7E;&#x7684;&#x8282;&#x70B9;&#x4E0A;</span>
+<span class="hljs-comment">#&#x67E5;&#x770B;Pod&#x8C03;&#x5EA6;&#x5230;NODE&#x5C5E;&#x6027;&#xFF0C;&#x786E;&#x5B9E;&#x662F;&#x8C03;&#x5EA6;&#x5230;&#x4E86;node1&#x8282;&#x70B9;&#x4E0A;</span>
+$ kubectl get pod pod-nodeselector -o wide
+NAME               READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+pod-nodeselector   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">14</span>s   <span class="hljs-number">10.244</span><span class="hljs-number">.196</span><span class="hljs-number">.189</span>   node01   &lt;none&gt;           &lt;none<span class="hljs-string">&gt;
+
+# &#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5220;&#x9664;pod&#xFF0C;&#x4FEE;&#x6539;nodeSelector&#x7684;&#x503C;&#x4E3A;nodeenv: xxxx&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x6253;&#x6709;&#x6B64;&#x6807;&#x7B7E;&#x7684;&#x8282;&#x70B9;&#xFF09;
+#&#x518D;&#x6B21;&#x67E5;&#x770B;&#xFF0C;&#x53D1;&#x73B0;pod&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;,Node&#x7684;&#x503C;&#x4E3A;none
+$ kubectl get pod -o wide
+</span><span class="hljs-attr">Events:</span>
+  Type     Reason            Age   From               Message
+<span class="hljs-bullet">  -</span>---     ------            ----  ----               -------
+  Warning  FailedScheduling  <span class="hljs-number">36</span>s   default-scheduler  <span class="hljs-number">0</span>/<span class="hljs-number">3</span> nodes are available: <span class="hljs-number">1</span> node(s) had untolerated taint {node-role.kubernetes.io/control-plane: }, <span class="hljs-number">2</span> node(s) didn<span class="hljs-string">&apos;t match Pod&apos;</span>s node affinity/selector. preemption: <span class="hljs-number">0</span>/<span class="hljs-number">3</span> nodes are available: <span class="hljs-number">3</span> Preemption is not helpful for scheduling.
+</code></pre>
+<h2 id="&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;"><a name="&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;</h2>
+<p>&#x4E0A;&#x4E00;&#x8282;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x4E24;&#x79CD;&#x5B9A;&#x5411;&#x8C03;&#x5EA6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;Node&#xFF0C;&#x90A3;&#x4E48;Pod&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x8FD0;&#x884C;&#xFF0C;&#x5373;&#x4F7F;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x8FD8;&#x6709;&#x53EF;&#x7528;Node&#x5217;&#x8868;&#x4E5F;&#x4E0D;&#x884C;&#xFF0C;&#x8FD9;&#x5C31;&#x9650;&#x5236;&#x4E86;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;kubernetes&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x4EB2;&#x548C;&#x6027;&#x8C03;&#x5EA6;&#xFF08;Affinity&#xFF09;&#x3002;&#x5B83;&#x5728;<strong>NodeSelector</strong>&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684;&#x8FDB;&#x884C;&#x4E86;&#x6269;&#x5C55;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5B9E;&#x73B0;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;Node&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x5EA6;&#x5230;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x4F7F;&#x8C03;&#x5EA6;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x3002;</p>
+<p>Affinity&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>nodeAffinity(node&#x4EB2;&#x548C;&#x6027;&#xFF09;: &#x4EE5;node&#x4E3A;&#x76EE;&#x6807;&#xFF0C;&#x89E3;&#x51B3;pod&#x53EF;&#x4EE5;&#x8C03;&#x5EA6;&#x5230;&#x54EA;&#x4E9B;node&#x7684;&#x95EE;&#x9898;</li>
+<li>podAffinity(pod&#x4EB2;&#x548C;&#x6027;) : &#x4EE5;pod&#x4E3A;&#x76EE;&#x6807;&#xFF0C;&#x89E3;&#x51B3;pod&#x53EF;&#x4EE5;&#x548C;&#x54EA;&#x4E9B;&#x5DF2;&#x5B58;&#x5728;&#x7684;pod&#x90E8;&#x7F72;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x62D3;&#x6251;&#x57DF;&#x4E2D;&#x7684;&#x95EE;&#x9898;</li>
+<li>podAntiAffinity(pod&#x53CD;&#x4EB2;&#x548C;&#x6027;) : &#x4EE5;pod&#x4E3A;&#x76EE;&#x6807;&#xFF0C;&#x89E3;&#x51B3;pod&#x4E0D;&#x80FD;&#x548C;&#x54EA;&#x4E9B;&#x5DF2;&#x5B58;&#x5728;pod&#x90E8;&#x7F72;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x62D3;&#x6251;&#x57DF;&#x4E2D;&#x7684;&#x95EE;&#x9898;</li>
+</ul>
+<blockquote>
+<p>&#x5173;&#x4E8E;&#x4EB2;&#x548C;&#x6027;(&#x53CD;&#x4EB2;&#x548C;&#x6027;)&#x4F7F;&#x7528;&#x573A;&#x666F;&#x7684;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p><strong>&#x4EB2;&#x548C;&#x6027;</strong>&#xFF1A;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5E94;&#x7528;&#x9891;&#x7E41;&#x4EA4;&#x4E92;&#xFF0C;&#x90A3;&#x5C31;&#x6709;&#x5FC5;&#x8981;&#x5229;&#x7528;&#x4EB2;&#x548C;&#x6027;&#x8BA9;&#x4E24;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x9760;&#x8FD1;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x56E0;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x800C;&#x5E26;&#x6765;&#x7684;&#x6027;&#x80FD;&#x635F;&#x8017;&#x3002;</p>
+<p><strong>&#x53CD;&#x4EB2;&#x548C;&#x6027;</strong>&#xFF1A;&#x5F53;&#x5E94;&#x7528;&#x7684;&#x91C7;&#x7528;&#x591A;&#x526F;&#x672C;&#x90E8;&#x7F72;&#x65F6;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x91C7;&#x7528;&#x53CD;&#x4EB2;&#x548C;&#x6027;&#x8BA9;&#x5404;&#x4E2A;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#x6253;&#x6563;&#x5206;&#x5E03;&#x5728;&#x5404;&#x4E2A;node&#x4E0A;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x670D;&#x52A1;&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x3002;</p>
+</blockquote>
+<h3 id="nodeaffinity"><a name="nodeaffinity" class="anchor-navigation-ex-anchor" href="#nodeaffinity"><i class="fa fa-link" aria-hidden="true"></i></a><strong>NodeAffinity</strong></h3>
+<p>&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<code>NodeAffinity</code>&#x7684;&#x53EF;&#x914D;&#x7F6E;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-shell">pod.spec.affinity.nodeAffinity
+  requiredDuringSchedulingIgnoredDuringExecution  Node&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x89C4;&#x5219;&#x624D;&#x53EF;&#x4EE5;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x786C;&#x9650;&#x5236;
+    nodeSelectorTerms  &#x8282;&#x70B9;&#x9009;&#x62E9;&#x5217;&#x8868;
+      matchFields   &#x6309;&#x8282;&#x70B9;&#x5B57;&#x6BB5;&#x5217;&#x51FA;&#x7684;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x8981;&#x6C42;&#x5217;&#x8868;
+      matchExpressions   &#x6309;&#x8282;&#x70B9;&#x6807;&#x7B7E;&#x5217;&#x51FA;&#x7684;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x8981;&#x6C42;&#x5217;&#x8868;(&#x63A8;&#x8350;)
+        key    &#x952E;
+        values &#x503C;
+        operator &#x5173;&#x7CFB;&#x7B26; &#x652F;&#x6301;Exists, DoesNotExist, In, NotIn, Gt, Lt
+  preferredDuringSchedulingIgnoredDuringExecution &#x4F18;&#x5148;&#x8C03;&#x5EA6;&#x5230;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#x7684;Node&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x8F6F;&#x9650;&#x5236; (&#x503E;&#x5411;)
+    preference   &#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x9879;&#xFF0C;&#x4E0E;&#x76F8;&#x5E94;&#x7684;&#x6743;&#x91CD;&#x76F8;&#x5173;&#x8054;
+      matchFields   &#x6309;&#x8282;&#x70B9;&#x5B57;&#x6BB5;&#x5217;&#x51FA;&#x7684;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x8981;&#x6C42;&#x5217;&#x8868;
+      matchExpressions   &#x6309;&#x8282;&#x70B9;&#x6807;&#x7B7E;&#x5217;&#x51FA;&#x7684;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x8981;&#x6C42;&#x5217;&#x8868;(&#x63A8;&#x8350;)
+        key    &#x952E;
+        values &#x503C;
+        operator &#x5173;&#x7CFB;&#x7B26; &#x652F;&#x6301;In, NotIn, Exists, DoesNotExist, Gt, Lt
+    weight &#x503E;&#x5411;&#x6743;&#x91CD;&#xFF0C;&#x5728;&#x8303;&#x56F4;1-100&#x3002;
+&#x5173;&#x7CFB;&#x7B26;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;:
+
+- matchExpressions:
+  - key: nodeenv              # &#x5339;&#x914D;&#x5B58;&#x5728;&#x6807;&#x7B7E;&#x7684;key&#x4E3A;nodeenv&#x7684;&#x8282;&#x70B9;
+    operator: Exists
+  - key: nodeenv              # &#x5339;&#x914D;&#x6807;&#x7B7E;&#x7684;key&#x4E3A;nodeenv,&#x4E14;value&#x662F;&quot;xxx&quot;&#x6216;&quot;yyy&quot;&#x7684;&#x8282;&#x70B9;
+    operator: In
+    values: [&quot;xxx&quot;,&quot;yyy&quot;]
+  - key: nodeenv              # &#x5339;&#x914D;&#x6807;&#x7B7E;&#x7684;key&#x4E3A;nodeenv,&#x4E14;value&#x5927;&#x4E8E;&quot;xxx&quot;&#x7684;&#x8282;&#x70B9;
+    operator: Gt
+    values: &quot;xxx&quot;
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x9996;&#x5148;&#x6F14;&#x793A;&#x4E00;&#x4E0B;<code>requiredDuringSchedulingIgnoredDuringExecution</code> ,</p>
+<p>&#x521B;&#x5EFA;pod-nodeaffinity-required.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-nodeaffinity-required
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  affinity:</span>  <span class="hljs-comment">#&#x4EB2;&#x548C;&#x6027;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-attr">    nodeAffinity:</span> <span class="hljs-comment">#&#x8BBE;&#x7F6E;node&#x4EB2;&#x548C;&#x6027;</span>
+<span class="hljs-attr">      requiredDuringSchedulingIgnoredDuringExecution:</span> <span class="hljs-comment"># &#x786C;&#x9650;&#x5236;</span>
+<span class="hljs-attr">        nodeSelectorTerms:</span>
+<span class="hljs-attr">        - matchExpressions:</span> <span class="hljs-comment"># &#x5339;&#x914D;nodeenv&#x7684;&#x503C;&#x5728;[&quot;xxx&quot;,&quot;yyy&quot;]&#x4E2D;&#x7684;&#x6807;&#x7B7E;</span>
+<span class="hljs-attr">          - key:</span> nodeenv
+<span class="hljs-attr">            operator:</span> In
+<span class="hljs-attr">            values:</span> [<span class="hljs-string">&quot;xxx&quot;</span>,<span class="hljs-string">&quot;yyy&quot;</span>]
+<span class="hljs-comment"># &#x67E5;&#x770B;pod&#x72B6;&#x6001; &#xFF08;&#x8FD0;&#x884C;&#x5931;&#x8D25;&#xFF09;</span>
+$ kubectl get pod -o wide
+NAME                        READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
+pod-nodeaffinity-required   <span class="hljs-number">0</span>/<span class="hljs-number">1</span>     Pending   <span class="hljs-number">0</span>          <span class="hljs-number">6</span>s    &lt;none&gt;   &lt;none&gt;   &lt;none&gt;           &lt;none<span class="hljs-string">&gt;
+
+# &#x67E5;&#x770B;Pod&#x7684;&#x8BE6;&#x60C5;
+# &#x53D1;&#x73B0;&#x8C03;&#x5EA6;&#x5931;&#x8D25;&#xFF0C;&#x63D0;&#x793A;node&#x9009;&#x62E9;&#x5931;&#x8D25;
+$ kubectl describe pod pod-nodeaffinity-required
+</span><span class="hljs-attr">Events:</span>
+  Type     Reason            Age   From               Message
+<span class="hljs-bullet">  -</span>---     ------            ----  ----               -------
+  Warning  FailedScheduling  <span class="hljs-number">42</span>s   default-scheduler  <span class="hljs-number">0</span>/<span class="hljs-number">3</span> nodes are available: <span class="hljs-number">1</span> node(s) had untolerated taint {node-role.kubernetes.io/control-plane: }, <span class="hljs-number">2</span> node(s) didn<span class="hljs-string">&apos;t match Pod&apos;</span>s node affinity/selector. preemption: <span class="hljs-number">0</span>/<span class="hljs-number">3</span> nodes are available: <span class="hljs-number">3</span> Preemption is not helpful for scheduling.
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;values: [&quot;xxx&quot;,&quot;yyy&quot;]------&gt; [&quot;pro&quot;,&quot;yyy&quot;]</span>
+<span class="hljs-comment"># &#x6B64;&#x65F6;&#x67E5;&#x770B;&#xFF0C;&#x53D1;&#x73B0;&#x8C03;&#x5EA6;&#x6210;&#x529F;&#xFF0C;&#x5DF2;&#x7ECF;&#x5C06;pod&#x8C03;&#x5EA6;&#x5230;&#x4E86;node1&#x4E0A;</span>
+$ kubectl get pod -o wide
+NAME                        READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+pod-nodeaffinity-required   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">7</span>s    <span class="hljs-number">10.244</span><span class="hljs-number">.196</span><span class="hljs-number">.187</span>   node01   &lt;none&gt;           &lt;none<span class="hljs-string">&gt;
+</span></code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x518D;&#x6F14;&#x793A;&#x4E00;&#x4E0B;<code>preferredDuringSchedulingIgnoredDuringExecution</code> ,</p>
+<p>&#x521B;&#x5EFA;pod-nodeaffinity-preferred.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-nodeaffinity-preferred
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  affinity:</span>  <span class="hljs-comment">#&#x4EB2;&#x548C;&#x6027;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-attr">    nodeAffinity:</span> <span class="hljs-comment">#&#x8BBE;&#x7F6E;node&#x4EB2;&#x548C;&#x6027;</span>
+<span class="hljs-attr">      preferredDuringSchedulingIgnoredDuringExecution:</span> <span class="hljs-comment"># &#x8F6F;&#x9650;&#x5236;</span>
+<span class="hljs-attr">      - weight:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">        preference:</span>
+<span class="hljs-attr">          matchExpressions:</span> <span class="hljs-comment"># &#x5339;&#x914D;env&#x7684;&#x503C;&#x5728;[&quot;xxx&quot;,&quot;yyy&quot;]&#x4E2D;&#x7684;&#x6807;&#x7B7E;(&#x5F53;&#x524D;&#x73AF;&#x5883;&#x6CA1;&#x6709;)</span>
+<span class="hljs-attr">          - key:</span> nodeenv
+<span class="hljs-attr">            operator:</span> In
+<span class="hljs-attr">            values:</span> [<span class="hljs-string">&quot;xxx&quot;</span>,<span class="hljs-string">&quot;yyy&quot;</span>]
+<span class="hljs-comment"># &#x521B;&#x5EFA;pod</span>
+[root@k8s-master01 ~]<span class="hljs-comment"># kubectl create -f pod-nodeaffinity-preferred.yaml</span>
+pod/pod-nodeaffinity-preferred created
+
+<span class="hljs-comment"># &#x67E5;&#x770B;pod&#x72B6;&#x6001; &#xFF08;&#x8FD0;&#x884C;&#x6210;&#x529F;&#xFF09;</span>
+$ kubectl get pod -o wide
+NAME                         READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+pod-nodeaffinity-preferred   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">6</span>s    <span class="hljs-number">10.244</span><span class="hljs-number">.196</span><span class="hljs-number">.186</span>   node01   &lt;none&gt;           &lt;none<span class="hljs-string">&gt;
+NodeAffinity&#x89C4;&#x5219;&#x8BBE;&#x7F6E;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;
+    1 &#x5982;&#x679C;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x4E86;nodeSelector&#x548C;nodeAffinity&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x90FD;&#x5F97;&#x5230;&#x6EE1;&#x8DB3;&#xFF0C;Pod&#x624D;&#x80FD;&#x8FD0;&#x884C;&#x5728;&#x6307;&#x5B9A;&#x7684;Node&#x4E0A;
+    2 &#x5982;&#x679C;nodeAffinity&#x6307;&#x5B9A;&#x4E86;&#x591A;&#x4E2A;nodeSelectorTerms&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5339;&#x914D;&#x6210;&#x529F;&#x5373;&#x53EF;
+    3 &#x5982;&#x679C;&#x4E00;&#x4E2A;nodeSelectorTerms&#x4E2D;&#x6709;&#x591A;&#x4E2A;matchExpressions &#xFF0C;&#x5219;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x6240;&#x6709;&#x7684;&#x624D;&#x80FD;&#x5339;&#x914D;&#x6210;&#x529F;
+    4 &#x5982;&#x679C;&#x4E00;&#x4E2A;pod&#x6240;&#x5728;&#x7684;Node&#x5728;Pod&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x5176;&#x6807;&#x7B7E;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF0C;&#x4E0D;&#x518D;&#x7B26;&#x5408;&#x8BE5;Pod&#x7684;&#x8282;&#x70B9;&#x4EB2;&#x548C;&#x6027;&#x9700;&#x6C42;&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x5C06;&#x5FFD;&#x7565;&#x6B64;&#x53D8;&#x5316;
+</span></code></pre>
+<h3 id="podaffinity"><a name="podaffinity" class="anchor-navigation-ex-anchor" href="#podaffinity"><i class="fa fa-link" aria-hidden="true"></i></a><strong>PodAffinity</strong></h3>
+<p>PodAffinity&#x4E3B;&#x8981;&#x5B9E;&#x73B0;&#x4EE5;&#x8FD0;&#x884C;&#x7684;Pod&#x4E3A;&#x53C2;&#x7167;&#xFF0C;&#x5B9E;&#x73B0;&#x8BA9;&#x65B0;&#x521B;&#x5EFA;&#x7684;Pod&#x8DDF;&#x53C2;&#x7167;pod&#x5728;&#x4E00;&#x4E2A;&#x533A;&#x57DF;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<code>PodAffinity</code>&#x7684;&#x53EF;&#x914D;&#x7F6E;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-shell">pod.spec.affinity.podAffinity
+  requiredDuringSchedulingIgnoredDuringExecution  &#x786C;&#x9650;&#x5236;
+    namespaces       &#x6307;&#x5B9A;&#x53C2;&#x7167;pod&#x7684;namespace
+    topologyKey      &#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x4F5C;&#x7528;&#x57DF;
+    labelSelector    &#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;
+      matchExpressions  &#x6309;&#x8282;&#x70B9;&#x6807;&#x7B7E;&#x5217;&#x51FA;&#x7684;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668;&#x8981;&#x6C42;&#x5217;&#x8868;(&#x63A8;&#x8350;)
+        key    &#x952E;
+        values &#x503C;
+        operator &#x5173;&#x7CFB;&#x7B26; &#x652F;&#x6301;In, NotIn, Exists, DoesNotExist.
+      matchLabels    &#x6307;&#x591A;&#x4E2A;matchExpressions&#x6620;&#x5C04;&#x7684;&#x5185;&#x5BB9;
+  preferredDuringSchedulingIgnoredDuringExecution &#x8F6F;&#x9650;&#x5236;
+    podAffinityTerm  &#x9009;&#x9879;
+      namespaces      
+      topologyKey
+      labelSelector
+        matchExpressions  
+          key    &#x952E;
+          values &#x503C;
+          operator
+        matchLabels 
+    weight &#x503E;&#x5411;&#x6743;&#x91CD;&#xFF0C;&#x5728;&#x8303;&#x56F4;1-100
+topologyKey&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8C03;&#x5EA6;&#x65F6;&#x4F5C;&#x7528;&#x57DF;,&#x4F8B;&#x5982;:
+    &#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E3A;kubernetes.io/hostname&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4EE5;Node&#x8282;&#x70B9;&#x4E3A;&#x533A;&#x5206;&#x8303;&#x56F4;
+    &#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E3A;beta.kubernetes.io/os,&#x5219;&#x4EE5;Node&#x8282;&#x70B9;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x6765;&#x533A;&#x5206;
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6F14;&#x793A;&#x4E0B;<code>requiredDuringSchedulingIgnoredDuringExecution</code>,</p>
+<p>1&#xFF09;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53C2;&#x7167;Pod&#xFF0C;pod-podaffinity-target.yaml&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-podaffinity-target
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    podenv:</span> pro <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6807;&#x7B7E;</span>
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  nodeName:</span> node01 <span class="hljs-comment"># &#x5C06;&#x76EE;&#x6807;pod&#x540D;&#x786E;&#x6307;&#x5B9A;&#x5230;node01&#x4E0A;</span>
+<span class="hljs-comment"># &#x67E5;&#x770B;pod&#x72B6;&#x51B5;</span>
+$ kubectl get pod -o wide --show-labels
+NAME                     READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES   LABELS
+pod-podaffinity-target   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">10</span>s   <span class="hljs-number">10.244</span><span class="hljs-number">.196</span><span class="hljs-number">.191</span>   node01   &lt;none&gt;           &lt;none&gt;            podenv=pro
+</code></pre>
+<p>2&#xFF09;&#x521B;&#x5EFA;pod-podaffinity-required.yaml&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-podaffinity-required
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  affinity:</span>  <span class="hljs-comment">#&#x4EB2;&#x548C;&#x6027;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-attr">    podAffinity:</span> <span class="hljs-comment">#&#x8BBE;&#x7F6E;pod&#x4EB2;&#x548C;&#x6027;</span>
+<span class="hljs-attr">      requiredDuringSchedulingIgnoredDuringExecution:</span> <span class="hljs-comment"># &#x786C;&#x9650;&#x5236;</span>
+<span class="hljs-attr">      - labelSelector:</span>
+<span class="hljs-attr">          matchExpressions:</span> <span class="hljs-comment"># &#x5339;&#x914D;env&#x7684;&#x503C;&#x5728;[&quot;xxx&quot;,&quot;yyy&quot;]&#x4E2D;&#x7684;&#x6807;&#x7B7E;</span>
+<span class="hljs-attr">          - key:</span> podenv
+<span class="hljs-attr">            operator:</span> In
+<span class="hljs-attr">            values:</span> [<span class="hljs-string">&quot;xxx&quot;</span>,<span class="hljs-string">&quot;yyy&quot;</span>]
+<span class="hljs-attr">        topologyKey:</span> kubernetes.io/hostname
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x914D;&#x7F6E;&#x8868;&#x8FBE;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A;&#x65B0;Pod&#x5FC5;&#x987B;&#x8981;&#x4E0E;&#x62E5;&#x6709;&#x6807;&#x7B7E;nodeenv=xxx&#x6216;&#x8005;nodeenv=yyy&#x7684;pod&#x5728;&#x540C;&#x4E00;Node&#x4E0A;&#xFF0C;&#x663E;&#x7136;&#x73B0;&#x5728;&#x6CA1;&#x6709;&#x8FD9;&#x6837;pod&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-shell"># &#x67E5;&#x770B;pod&#x72B6;&#x6001;&#xFF0C;&#x53D1;&#x73B0;&#x672A;&#x8FD0;&#x884C;
+$ kubectl get pod -o wide
+NAME                       READY   STATUS    RESTARTS   AGE     IP               NODE     NOMINATED NODE   READINESS GATES
+pod-podaffinity-required   0/1     Pending   0          67s     &lt;none&gt;           &lt;none&gt;   &lt;none&gt;           &lt;none&gt;
+pod-podaffinity-target     1/1     Running   0          2m29s   10.244.196.191   node01   &lt;none&gt;           &lt;none&gt;
+
+# &#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;
+$ kubectl describe pod pod-podaffinity-required
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  106s  default-scheduler  0/3 nodes are available: 1 node(s) had untolerated taint {node-role.kubernetes.io/control-plane: }, 2 node(s) didn&apos;t match pod affinity rules. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.
+
+# &#x63A5;&#x4E0B;&#x6765;&#x4FEE;&#x6539;  values: [&quot;xxx&quot;,&quot;yyy&quot;]-----&gt;values:[&quot;pro&quot;,&quot;yyy&quot;]
+# &#x610F;&#x601D;&#x662F;&#xFF1A;&#x65B0;Pod&#x5FC5;&#x987B;&#x8981;&#x4E0E;&#x62E5;&#x6709;&#x6807;&#x7B7E;nodeenv=xxx&#x6216;&#x8005;nodeenv=yyy&#x7684;pod&#x5728;&#x540C;&#x4E00;Node&#x4E0A;
+# &#x7136;&#x540E;&#x91CD;&#x65B0;&#x521B;&#x5EFA;pod&#xFF0C;&#x67E5;&#x770B;&#x6548;&#x679C;
+# &#x53D1;&#x73B0;&#x6B64;&#x65F6;Pod&#x8FD0;&#x884C;&#x6B63;&#x5E38;
+$ kubectl get pod -o wide
+NAME                       READY   STATUS    RESTARTS   AGE    IP               NODE     NOMINATED NODE   READINESS GATES
+pod-podaffinity-required   1/1     Running   0          15s    10.244.196.129   node01   &lt;none&gt;           &lt;none&gt;
+pod-podaffinity-target     1/1     Running   0          4m8s   10.244.196.191   node01   &lt;none&gt;           &lt;none&gt;
+</code></pre>
+<p>&#x5173;&#x4E8E;<code>PodAffinity</code>&#x7684; <code>preferredDuringSchedulingIgnoredDuringExecution</code>&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x6F14;&#x793A;&#x3002;</p>
+<h3 id="podantiaffinity"><a name="podantiaffinity" class="anchor-navigation-ex-anchor" href="#podantiaffinity"><i class="fa fa-link" aria-hidden="true"></i></a><strong>PodAntiAffinity</strong></h3>
+<p>PodAntiAffinity&#x4E3B;&#x8981;&#x5B9E;&#x73B0;&#x4EE5;&#x8FD0;&#x884C;&#x7684;Pod&#x4E3A;&#x53C2;&#x7167;&#xFF0C;&#x8BA9;&#x65B0;&#x521B;&#x5EFA;&#x7684;Pod&#x8DDF;&#x53C2;&#x7167;pod&#x4E0D;&#x5728;&#x4E00;&#x4E2A;&#x533A;&#x57DF;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x548C;&#x9009;&#x9879;&#x8DDF;PodAffinty&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x505A;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#xFF0C;&#x76F4;&#x63A5;&#x505A;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;&#x3002;</p>
+<p>1&#xFF09;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x4E0A;&#x4E2A;&#x6848;&#x4F8B;&#x4E2D;&#x76EE;&#x6807;pod</p>
+<pre><code class="lang-shell">$ kubectl get pod --show-labels
+NAME                     READY   STATUS    RESTARTS   AGE     LABELS
+pod-podaffinity-target   1/1     Running   0          5m31s   podenv=pro
+</code></pre>
+<p>2&#xFF09;&#x521B;&#x5EFA;pod-podantiaffinity-required.yaml&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod-podantiaffinity-required
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> nginx
+<span class="hljs-attr">    image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">  affinity:</span>  <span class="hljs-comment">#&#x4EB2;&#x548C;&#x6027;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-attr">    podAntiAffinity:</span> <span class="hljs-comment">#&#x8BBE;&#x7F6E;pod&#x4EB2;&#x548C;&#x6027;</span>
+<span class="hljs-attr">      requiredDuringSchedulingIgnoredDuringExecution:</span> <span class="hljs-comment"># &#x786C;&#x9650;&#x5236;</span>
+<span class="hljs-attr">      - labelSelector:</span>
+<span class="hljs-attr">          matchExpressions:</span> <span class="hljs-comment"># &#x5339;&#x914D;podenv&#x7684;&#x503C;&#x5728;[&quot;pro&quot;]&#x4E2D;&#x7684;&#x6807;&#x7B7E;</span>
+<span class="hljs-attr">          - key:</span> podenv
+<span class="hljs-attr">            operator:</span> In
+<span class="hljs-attr">            values:</span> [<span class="hljs-string">&quot;pro&quot;</span>]
+<span class="hljs-attr">        topologyKey:</span> kubernetes.io/hostname
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x914D;&#x7F6E;&#x8868;&#x8FBE;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A;&#x65B0;Pod&#x5FC5;&#x987B;&#x8981;&#x4E0E;&#x62E5;&#x6709;&#x6807;&#x7B7E;nodeenv=pro&#x7684;pod&#x4E0D;&#x5728;&#x540C;&#x4E00;Node&#x4E0A;&#xFF0C;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-shell"># &#x67E5;&#x770B;pod
+# &#x53D1;&#x73B0;&#x8C03;&#x5EA6;&#x5230;&#x4E86;node2&#x4E0A;
+$ kubectl get pod -o wide
+NAME                           READY   STATUS    RESTARTS   AGE     IP               NODE     NOMINATED NODE   READINESS GATES
+pod-podaffinity-target         1/1     Running   0          6m30s   10.244.196.191   node01   &lt;none&gt;           &lt;none&gt;
+pod-podantiaffinity-required   1/1     Running   0          8s      10.244.140.122   node02   &lt;none&gt;           &lt;none&gt;
+</code></pre>
+<h2 id="&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;"><a name="&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;" class="anchor-navigation-ex-anchor" href="#&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;</h2>
+<p><strong>&#x6C61;&#x70B9;&#xFF08;Taints&#xFF09;</strong></p>
+<p>&#x524D;&#x9762;&#x7684;&#x8C03;&#x5EA6;&#x65B9;&#x5F0F;&#x90FD;&#x662F;&#x7AD9;&#x5728;Pod&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x5728;Pod&#x4E0A;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF0C;&#x6765;&#x786E;&#x5B9A;Pod&#x662F;&#x5426;&#x8981;&#x8C03;&#x5EA6;&#x5230;&#x6307;&#x5B9A;&#x7684;Node&#x4E0A;&#xFF0C;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7AD9;&#x5728;Node&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x5728;Node&#x4E0A;&#x6DFB;&#x52A0;<strong>&#x6C61;&#x70B9;</strong>&#x5C5E;&#x6027;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5141;&#x8BB8;Pod&#x8C03;&#x5EA6;&#x8FC7;&#x6765;&#x3002;</p>
+<p>Node&#x88AB;&#x8BBE;&#x7F6E;&#x4E0A;&#x6C61;&#x70B9;&#x4E4B;&#x540E;&#x5C31;&#x548C;Pod&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x4E86;&#x4E00;&#x79CD;&#x76F8;&#x65A5;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x8FDB;&#x800C;&#x62D2;&#x7EDD;Pod&#x8C03;&#x5EA6;&#x8FDB;&#x6765;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C06;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;Pod&#x9A71;&#x9010;&#x51FA;&#x53BB;&#x3002;</p>
+<p>&#x6C61;&#x70B9;&#x7684;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<code>key=value:effect</code>, key&#x548C;value&#x662F;&#x6C61;&#x70B9;&#x7684;&#x6807;&#x7B7E;&#xFF0C;effect&#x63CF;&#x8FF0;&#x6C61;&#x70B9;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x652F;&#x6301;&#x5982;&#x4E0B;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#xFF1A;</p>
+<ul>
+<li>PreferNoSchedule&#xFF1A;kubernetes&#x5C06;<strong>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x628A;Pod&#x8C03;&#x5EA6;&#x5230;&#x5177;&#x6709;&#x8BE5;&#x6C61;&#x70B9;&#x7684;Node&#x4E0A;</strong>&#xFF0C;&#x9664;&#x975E;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x53EF;&#x8C03;&#x5EA6;</li>
+<li>NoSchedule&#xFF1A;kubernetes&#x5C06;<strong>&#x4E0D;&#x4F1A;&#x628A;Pod&#x8C03;&#x5EA6;&#x5230;&#x5177;&#x6709;&#x8BE5;&#x6C61;&#x70B9;&#x7684;Node&#x4E0A;</strong>&#xFF0C;<strong>&#x4F46;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5F53;&#x524D;Node&#x4E0A;&#x5DF2;&#x5B58;&#x5728;&#x7684;Pod</strong></li>
+<li>NoExecute&#xFF1A;kubernetes&#x5C06;<strong>&#x4E0D;&#x4F1A;&#x628A;Pod&#x8C03;&#x5EA6;&#x5230;&#x5177;&#x6709;&#x8BE5;&#x6C61;&#x70B9;&#x7684;Node&#x4E0A;</strong>&#xFF0C;<strong>&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x5C06;Node&#x4E0A;&#x5DF2;&#x5B58;&#x5728;&#x7684;Pod&#x9A71;&#x79BB;</strong></li>
+</ul>
+<p><img src="09.&#x8C03;&#x5EA6;&#x5668;.assets/image-20240918103251502.png" alt="image-20240918103251502"></p>
+<p>&#x4F7F;&#x7528;kubectl&#x8BBE;&#x7F6E;&#x548C;&#x53BB;&#x9664;&#x6C61;&#x70B9;&#x7684;&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x8BBE;&#x7F6E;&#x6C61;&#x70B9;
+kubectl taint nodes node1 key=value:effect
+
+# &#x53BB;&#x9664;&#x6C61;&#x70B9;
+kubectl taint nodes node1 key:effect-
+
+# &#x53BB;&#x9664;&#x6240;&#x6709;&#x6C61;&#x70B9;
+kubectl taint nodes node1 key-
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6F14;&#x793A;&#x4E0B;&#x6C61;&#x70B9;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x4E3A;node01&#x8BBE;&#x7F6E;&#x6C61;&#x70B9;(PreferNoSchedule)
+$ kubectl taint node node01 tag=eagle:PreferNoSchedule
+node/node01 tainted
+
+# &#x521B;&#x5EFA;100&#x4E2A;pod&#xFF0C;&#x5168;&#x90E8;&#x90FD;&#x8FD0;&#x884C;&#x5728;&#x4E86;node02&#x8282;&#x70B9;&#x4E0A;
+$ kubectl create deployment myapp --image=aaronxudocker/myapp:v1.0 --replicas=100
+deployment.apps/myapp created
+$ kubectl get pod -o wide |grep node02|wc -l
+100
+
+# &#x521B;&#x5EFA;1000&#x4E2A;pod&#x7684;&#x65F6;&#x5019;&#xFF0C;node02&#x8282;&#x70B9;&#x6027;&#x80FD;&#x4E0D;&#x8DB3;&#xFF0C;&#x4E0D;&#x6EE1;&#x8DB3;&#x9884;&#x9009;&#x6761;&#x4EF6;&#xFF0C;&#x90E8;&#x5206;pod&#x8FD0;&#x884C;&#x5230;&#x4E86;node01&#x4E0A;&#x9762;
+$ kubectl get pod -o wide |grep node01|wc -l
+106
+$ kubectl get pod -o wide |grep node02|wc -l
+103
+
+# &#x4E3A;node1&#x8BBE;&#x7F6E;&#x6C61;&#x70B9;(&#x53D6;&#x6D88;PreferNoSchedule&#xFF0C;&#x8BBE;&#x7F6E;NoSchedule)
+$ kubectl taint nodes node01 tag:PreferNoSchedule-
+node/node01 untainted
+$ kubectl taint nodes node01 tag=eagle:NoSchedule
+node/node01 tainted
+
+# &#x521B;&#x5EFA;pod
+$ kubectl create deployment myapp --image=aaronxudocker/myapp:v1.0 --replicas=100
+deployment.apps/myapp created
+
+$ kubectl get pod -o wide | grep node02 | wc -l
+100
+
+# &#x5173;&#x95ED;node02&#x865A;&#x62DF;&#x673A;&#x540E;&#xFF0C;&#x518D;&#x6B21;&#x521B;&#x5EFA;&#xFF0C;&#x65E0;&#x6CD5;&#x88AB;&#x8C03;&#x5EA6;
+$ kubectl get pod -o wide
+NAME                   READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
+myapp-9d57f8b4-2jf2f   0/1     Pending   0          4s    &lt;none&gt;   &lt;none&gt;   &lt;none&gt;           &lt;none&gt;
+myapp-9d57f8b4-2rkhr   0/1     Pending   0          8s    &lt;none&gt;   &lt;none&gt;   &lt;none&gt;           &lt;none&gt;
+myapp-9d57f8b4-2sfbn   0/1     Pending   0          7s    &lt;none&gt;   &lt;none&gt;   &lt;none&gt;           &lt;none&gt;
+myapp-9d57f8b4-44hjs   0/1     Pending   0          4s    &lt;none&gt;   &lt;none&gt;   &lt;none&gt;           &lt;none&gt;
+
+
+# &#x4E3A;node1&#x8BBE;&#x7F6E;&#x6C61;&#x70B9;(&#x53D6;&#x6D88;NoSchedule&#xFF0C;&#x8BBE;&#x7F6E;NoExecute)
+$ kubectl taint nodes node01 tag:NoSchedule-
+
+# &#x521B;&#x5EFA;10&#x4E2A;pod&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x90E8;&#x5206;&#x662F;&#x5728;node01&#x4E0A;&#x8FD0;&#x884C;&#x7684;
+$ kubectl create deployment myapp --image=aaronxudocker/myapp:v1.0 --replicas=10
+deployment.apps/myapp created
+
+$ kubectl get pod -o wide |grep node01 |wc -l
+5
+
+# &#x8BBE;&#x7F6E;NoExecute&#xFF0C;&#x6240;&#x6709;&#x7684;pod&#x8FD0;&#x884C;&#x5230;&#x4E86;node02&#x4E0A;
+$ kubectl taint nodes node01 tag=eagle:NoExecute
+$ kubectl get pod -o wide |grep node01 |wc -l
+0
+&#x5C0F;&#x63D0;&#x793A;&#xFF1A;
+    &#x4F7F;&#x7528;kubeadm&#x642D;&#x5EFA;&#x7684;&#x96C6;&#x7FA4;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x4F1A;&#x7ED9;master&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6C61;&#x70B9;&#x6807;&#x8BB0;,&#x6240;&#x4EE5;pod&#x5C31;&#x4E0D;&#x4F1A;&#x8C03;&#x5EA6;&#x5230;master&#x8282;&#x70B9;&#x4E0A;.
+</code></pre>
+<p><strong>&#x5BB9;&#x5FCD;&#xFF08;Toleration&#xFF09;</strong></p>
+<p>&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x4E86;&#x6C61;&#x70B9;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;node&#x4E0A;&#x6DFB;&#x52A0;&#x6C61;&#x70B9;&#x7528;&#x4E8E;&#x62D2;&#x7EDD;pod&#x8C03;&#x5EA6;&#x4E0A;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5C31;&#x662F;&#x60F3;&#x5C06;&#x4E00;&#x4E2A;pod&#x8C03;&#x5EA6;&#x5230;&#x4E00;&#x4E2A;&#x6709;&#x6C61;&#x70B9;&#x7684;node&#x4E0A;&#x53BB;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x8981;&#x4F7F;&#x7528;&#x5230;<strong>&#x5BB9;&#x5FCD;</strong>&#x3002;</p>
+<p><img src="09.&#x8C03;&#x5EA6;&#x5668;.assets/image-20240918103742892.png" alt="image-20240918103742892"></p>
+<blockquote>
+<p>&#x6C61;&#x70B9;&#x5C31;&#x662F;&#x62D2;&#x7EDD;&#xFF0C;&#x5BB9;&#x5FCD;&#x5C31;&#x662F;&#x5FFD;&#x7565;&#xFF0C;Node&#x901A;&#x8FC7;&#x6C61;&#x70B9;&#x62D2;&#x7EDD;pod&#x8C03;&#x5EA6;&#x4E0A;&#x53BB;&#xFF0C;Pod&#x901A;&#x8FC7;&#x5BB9;&#x5FCD;&#x5FFD;&#x7565;&#x62D2;&#x7EDD;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x5148;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x6848;&#x4F8B;&#x770B;&#x4E0B;&#x6548;&#x679C;&#xFF1A;</p>
+<ol>
+<li>&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#xFF0C;&#x5DF2;&#x7ECF;&#x5728;node1&#x8282;&#x70B9;&#x4E0A;&#x6253;&#x4E0A;&#x4E86;<code>NoExecute</code>&#x7684;&#x6C61;&#x70B9;&#xFF0C;&#x6B64;&#x65F6;pod&#x662F;&#x8C03;&#x5EA6;&#x4E0D;&#x4E0A;&#x53BB;&#x7684;</li>
+<li>&#x672C;&#x5C0F;&#x8282;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9;pod&#x6DFB;&#x52A0;&#x5BB9;&#x5FCD;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5176;&#x8C03;&#x5EA6;&#x4E0A;&#x53BB;</li>
+</ol>
+<p>&#x521B;&#x5EFA;pod-toleration.yaml,&#x5185;&#x5BB9;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> apps/v1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> myapp
+<span class="hljs-attr">  name:</span> myapp
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">10</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> myapp
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        app:</span> myapp
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - image:</span> aaronxudocker/myapp:v1<span class="hljs-number">.0</span>
+<span class="hljs-attr">        name:</span> myapp
+<span class="hljs-attr">      tolerations:</span>      <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5BB9;&#x5FCD;</span>
+<span class="hljs-attr">      - key:</span> <span class="hljs-string">&quot;tag&quot;</span>        <span class="hljs-comment"># &#x8981;&#x5BB9;&#x5FCD;&#x7684;&#x6C61;&#x70B9;&#x7684;key</span>
+<span class="hljs-attr">        operator:</span> <span class="hljs-string">&quot;Equal&quot;</span> <span class="hljs-comment"># &#x64CD;&#x4F5C;&#x7B26;</span>
+<span class="hljs-attr">        value:</span> <span class="hljs-string">&quot;eagle&quot;</span>    <span class="hljs-comment"># &#x5BB9;&#x5FCD;&#x7684;&#x6C61;&#x70B9;&#x7684;value</span>
+<span class="hljs-attr">        effect:</span> <span class="hljs-string">&quot;NoExecute&quot;</span>   <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5BB9;&#x5FCD;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x548C;&#x6807;&#x8BB0;&#x7684;&#x6C61;&#x70B9;&#x89C4;&#x5219;&#x76F8;&#x540C;</span>
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5BB9;&#x5FCD;&#x4E4B;&#x540E;&#x7684;pod</span>
+$ kubectl get pod -o wide
+NAME                     READY   STATUS    RESTARTS   AGE   IP               NODE     NOMINATED NODE   READINESS GATES
+myapp<span class="hljs-bullet">-6687</span>b4f9d7<span class="hljs-bullet">-562</span>lv   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">3</span>s    <span class="hljs-number">10.244</span><span class="hljs-number">.140</span><span class="hljs-number">.150</span>   node02   &lt;none&gt;           &lt;none<span class="hljs-string">&gt;
+myapp-6687b4f9d7-6m7wb   1/1     Running   0          3s    10.244.196.128   node01   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-d9tgk   1/1     Running   0          3s    10.244.196.168   node01   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-fsqw7   1/1     Running   0          3s    10.244.140.159   node02   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-j7c4x   1/1     Running   0          3s    10.244.140.158   node02   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-j7dfx   1/1     Running   0          3s    10.244.196.178   node01   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-ll6z2   1/1     Running   0          3s    10.244.196.140   node01   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-lwqj4   1/1     Running   0          3s    10.244.140.167   node02   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-mvdtg   1/1     Running   0          3s    10.244.196.167   node01   &lt;none&gt;           &lt;none&gt;
+myapp-6687b4f9d7-qlw5x   1/1     Running   0          3s    10.244.140.147   node02   &lt;none&gt;           &lt;none&gt;
+</span></code></pre>
+<p>&#x4E0B;&#x9762;&#x770B;&#x4E00;&#x4E0B;&#x5BB9;&#x5FCD;&#x7684;&#x8BE6;&#x7EC6;&#x914D;&#x7F6E;:</p>
+<pre><code class="lang-shell">$ kubectl explain pod.spec.tolerations
+......
+FIELDS:
+   key       # &#x5BF9;&#x5E94;&#x7740;&#x8981;&#x5BB9;&#x5FCD;&#x7684;&#x6C61;&#x70B9;&#x7684;&#x952E;&#xFF0C;&#x7A7A;&#x610F;&#x5473;&#x7740;&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x952E;
+   value     # &#x5BF9;&#x5E94;&#x7740;&#x8981;&#x5BB9;&#x5FCD;&#x7684;&#x6C61;&#x70B9;&#x7684;&#x503C;
+   operator  # key-value&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x652F;&#x6301;Equal&#x548C;Exists&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;
+   effect    # &#x5BF9;&#x5E94;&#x6C61;&#x70B9;&#x7684;effect&#xFF0C;&#x7A7A;&#x610F;&#x5473;&#x7740;&#x5339;&#x914D;&#x6240;&#x6709;&#x5F71;&#x54CD;
+   tolerationSeconds   # &#x5BB9;&#x5FCD;&#x65F6;&#x95F4;, &#x5F53;effect&#x4E3A;NoExecute&#x65F6;&#x751F;&#x6548;&#xFF0C;&#x8868;&#x793A;pod&#x5728;Node&#x4E0A;&#x7684;&#x505C;&#x7559;&#x65F6;&#x95F4;
+</code></pre>
+<p>&#x5B66;&#x524D;&#x6CBF;IT&#xFF0C;&#x5230;&#x82F1;&#x683C;&#x79D1;&#x6280;!&#x672C;&#x6587;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A; 2025-03-30 23:07:56</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../08.数据存储/08.数据存储.html" class="navigation navigation-prev " aria-label="Previous page: 08.数据存储">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10.安全认证/10.安全认证.html" class="navigation navigation-next " aria-label="Next page: 10.安全认证">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09.调度器","level":"1.2.9","depth":2,"next":{"title":"10.安全认证","level":"1.2.10","depth":2,"path":"10.安全认证/10.安全认证.md","ref":"10.安全认证/10.安全认证.md","articles":[]},"previous":{"title":"08.数据存储","level":"1.2.8","depth":2,"path":"08.数据存储/08.数据存储.md","ref":"08.数据存储/08.数据存储.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","theme-comscore","hide-element","code","-lunr","-search","search-pro","-sharing","sharing-plus","ancre-navigation","wide-page","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search-pro":{},"wide-page":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"09.调度器/09.调度器.md","mtime":"2025-06-24T01:11:17.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-27T09:24:02.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

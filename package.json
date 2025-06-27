@@ -1,0 +1,24 @@
+{
+  "name": "gitbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "gitbook-plugin-ancre-navigation": "^1.0.0",
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-chapter-fold": "^0.0.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-hide-element": "^0.0.4",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-sharing-plus": "^0.0.2",
+    "gitbook-plugin-theme-comscore": "^0.0.3",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "gitbook serve"
+  },
+  "author": "",
+  "license": "ISC"
+}

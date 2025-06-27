@@ -1,0 +1,1083 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05.Pod生命周期 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../06.Pod控制器/06.Pod控制器.html" />
+    
+    
+    <link rel="prev" href="../04.资源清单/04.资源清单.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    01.kubernetes概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../02.Pod与网络/02.Pod与网络.html">
+            
+                <a href="../02.Pod与网络/02.Pod与网络.html">
+            
+                    
+                    02.Pod与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../03.安装手册/03.安装手册.html">
+            
+                <a href="../03.安装手册/03.安装手册.html">
+            
+                    
+                    03.安装手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../04.资源清单/04.资源清单.html">
+            
+                <a href="../04.资源清单/04.资源清单.html">
+            
+                    
+                    04.资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="05.Pod生命周期.html">
+            
+                <a href="05.Pod生命周期.html">
+            
+                    
+                    05.Pod生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../06.Pod控制器/06.Pod控制器.html">
+            
+                <a href="../06.Pod控制器/06.Pod控制器.html">
+            
+                    
+                    06.Pod控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../07.Service/07.Service.html">
+            
+                <a href="../07.Service/07.Service.html">
+            
+                    
+                    07.Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../08.数据存储/08.数据存储.html">
+            
+                <a href="../08.数据存储/08.数据存储.html">
+            
+                    
+                    08.数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../09.调度器/09.调度器.html">
+            
+                <a href="../09.调度器/09.调度器.html">
+            
+                    
+                    09.调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../10.安全认证/10.安全认证.html">
+            
+                <a href="../10.安全认证/10.安全认证.html">
+            
+                    
+                    10.安全认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../11.DashBoard/11.DashBoard.html">
+            
+                <a href="../11.DashBoard/11.DashBoard.html">
+            
+                    
+                    11.DashBoard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >05.Pod生命周期</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#05pod&#x751F;&#x547D;&#x5468;&#x671F;"><b></b>05.Pod&#x751F;&#x547D;&#x5468;&#x671F;</a></li><li><span class="title-icon "></span><a href="#pod&#x751F;&#x547D;&#x5468;&#x671F;"><b></b>Pod&#x751F;&#x547D;&#x5468;&#x671F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x68C0;&#x6D4B;initc&#x7684;&#x963B;&#x585E;&#x6027;"><b></b>&#x68C0;&#x6D4B;initC&#x7684;&#x963B;&#x585E;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#pod&#x63A2;&#x9488;"><b></b>Pod&#x63A2;&#x9488;</a></li><ul><li><span class="title-icon "></span><a href="#&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;"><b></b>&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#readinessprobe&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><b></b>readinessProbe&#x5C31;&#x7EEA;&#x63A2;&#x9488;</a></li><li><span class="title-icon "></span><a href="#livenessprobe&#x5B58;&#x6D3B;&#x63A2;&#x9488;"><b></b>livenessProbe&#x5B58;&#x6D3B;&#x63A2;&#x9488;</a></li><li><span class="title-icon "></span><a href="#startupprobe&#x542F;&#x52A8;&#x63A2;&#x9488;"><b></b>startupProbe&#x542F;&#x52A8;&#x63A2;&#x9488;</a></li></ul></ul><li><span class="title-icon "></span><a href="#pod&#x94A9;&#x5B50;"><b></b>Pod&#x94A9;&#x5B50;</a></li><ul><li><span class="title-icon "></span><a href="#pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;"><b></b>Pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x8C03;&#x5EA6;pod"><b></b>&#x8C03;&#x5EA6;Pod</a></li></ul></div><a href="#05pod&#x751F;&#x547D;&#x5468;&#x671F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="05pod&#x751F;&#x547D;&#x5468;&#x671F;"><a name="05pod&#x751F;&#x547D;&#x5468;&#x671F;" class="anchor-navigation-ex-anchor" href="#05pod&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>05.Pod&#x751F;&#x547D;&#x5468;&#x671F;</h1>
+<h1 id="pod&#x751F;&#x547D;&#x5468;&#x671F;"><a name="pod&#x751F;&#x547D;&#x5468;&#x671F;" class="anchor-navigation-ex-anchor" href="#pod&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>Pod&#x751F;&#x547D;&#x5468;&#x671F;</h1>
+<p><img src="05.Pod&#x751F;&#x547D;&#x5468;&#x671F;.assets/image-20240906095839924.png" alt="image-20240906095839924"></p>
+<p>init&#x5BB9;&#x5668;&#x4E0E;&#x666E;&#x901A;&#x7684;&#x5BB9;&#x5668;&#x975E;&#x5E38;&#x50CF;&#xFF0C;&#x9664;&#x4E86;&#x5982;&#x4E0B;&#x4E24;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>init&#x5BB9;&#x5668;&#x603B;&#x662F;&#x8FD0;&#x884C;&#x5230;&#x6210;&#x529F;&#x5B8C;&#x6210;&#x4E3A;&#x6B62;</li>
+<li>&#x6BCF;&#x4E2A;init&#x5BB9;&#x5668;&#x90FD;&#x5FC5;&#x987B;&#x5728;&#x4E0B;&#x4E00;&#x4E2A;init&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#x6210;&#x529F;&#x5B8C;&#x6210;</li>
+</ul>
+<p>&#x5982;&#x679C;Pod&#x7684;Init&#x5BB9;&#x5668;&#x5931;&#x8D25;&#xFF0C;Kubernetes&#x4F1A;&#x4E0D;&#x65AD;&#x5730;&#x91CD;&#x542F;&#x8BE5;Pod&#xFF0C;&#x76F4;&#x5230;Init&#x5BB9;&#x5668;&#x6210;&#x529F;&#x4E3A;&#x6B62;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;Pod&#x5BF9;&#x5E94;&#x7684;restartPolicy&#x4E3A;Never&#xFF0C;&#x5B83;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x542F;&#x52A8;</p>
+<h2 id="&#x68C0;&#x6D4B;initc&#x7684;&#x963B;&#x585E;&#x6027;"><a name="&#x68C0;&#x6D4B;initc&#x7684;&#x963B;&#x585E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x68C0;&#x6D4B;initc&#x7684;&#x963B;&#x585E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68C0;&#x6D4B;initC&#x7684;&#x963B;&#x585E;&#x6027;</h2>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> initc<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> initc
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp-container
+<span class="hljs-attr">    image:</span> centos:<span class="hljs-number">7</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;echo The app is running &amp;&amp; sleep 10&apos;</span>]
+<span class="hljs-attr">  initContainers:</span>
+<span class="hljs-attr">  - name:</span> init-myservice
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;</span>]
+<span class="hljs-attr">  - name:</span> init-mydb
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;until nslookup mydb; do echo waiting for mydb; sleep 2; done;&apos;</span>]
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x770B;&#x5230;&#x4E0D;&#x505C;&#x7684;&#x5728;&#x5C1D;&#x8BD5;</span>
+$ kubectl logs initc<span class="hljs-bullet">-1</span> -c init-myservice
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;svc&#x8D44;&#x6E90;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;CoreDNS&#x81EA;&#x52A8;&#x5C06;myservice&#x89E3;&#x6790;&#x6210;&#x529F;&#xFF0C;&#x8BE6;&#x89E3;&#x770B;&#x540E;&#x9762;&#x7684;service&#x90E8;&#x5206;</span>
+$ kubectl create svc clusterip myservice --tcp=<span class="hljs-number">80</span>:<span class="hljs-number">80</span>
+</code></pre>
+<p>&#x5982;&#x679C;initc&#x6267;&#x884C;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;initc</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> initc<span class="hljs-bullet">-2</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> initc
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp-container
+<span class="hljs-attr">    image:</span> centos:<span class="hljs-number">7</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;echo The app is running &amp;&amp; sleep 10&apos;</span>]
+<span class="hljs-attr">  initContainers:</span>
+<span class="hljs-attr">  - name:</span> init-myservice
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;</span>]
+<span class="hljs-attr">  - name:</span> randexit
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:randexitv1
+<span class="hljs-attr">    args:</span> [<span class="hljs-string">&apos;--exitcode=1&apos;</span>]
+$ kubectl get pod
+NAME      READY   STATUS       RESTARTS      AGE
+initc<span class="hljs-bullet">-1</span>   <span class="hljs-number">0</span>/<span class="hljs-number">1</span>     Init:<span class="hljs-number">1</span>/<span class="hljs-number">2</span>     <span class="hljs-number">0</span>             <span class="hljs-number">16</span>m
+initc<span class="hljs-bullet">-2</span>   <span class="hljs-number">0</span>/<span class="hljs-number">1</span>     Init:Error   <span class="hljs-number">5</span> (<span class="hljs-number">97</span>s ago)   <span class="hljs-number">3</span>m42s
+$ kubectl logs initc<span class="hljs-bullet">-2</span> -c randexit
+&#x4F11;&#x7720; <span class="hljs-number">4</span> &#x79D2;&#xFF0C;&#x8FD4;&#x56DE;&#x7801;&#x4E3A; <span class="hljs-number">1</span>&#xFF01;
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8BA9;initc&#x7684;&#x8FD4;&#x56DE;&#x7801;&#x76F4;&#x63A5;&#x4E3A;0&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;pod&#x6B63;&#x5E38;&#x542F;&#x52A8;</p>
+<pre><code class="lang-bash">$ kubectl get pod
+NAME      READY   STATUS     RESTARTS     AGE
+initc-1   0/1     Init:1/2   0            19m
+initc-2   1/1     Running    1 (7s ago)   72s
+</code></pre>
+<ul>
+<li>InitC&#x4E0E;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5177;&#x5907;&#x4E0D;&#x540C;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x4E00;&#x4E9B;&#x5371;&#x9669;&#x7684;&#x5DE5;&#x5177;&#x653E;&#x7F6E;&#x5728;initC&#x4E2D;&#xFF0C;&#x8FDB;&#x884C;&#x4F7F;&#x7528;</li>
+<li>initC&#x591A;&#x4E2A;&#x4E4B;&#x95F4;&#x662F;&#x7EBF;&#x6027;&#x542F;&#x52A8;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x5EF6;&#x8FDF;&#x6027;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>initC&#x65E0;&#x6CD5;&#x5B9A;&#x4E49;readinessProbe&#xFF0C;&#x5176;&#x5B83;&#x4EE5;&#x5916;&#x540C;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5B9A;&#x4E49;&#x65E0;&#x5F02;</li>
+</ul>
+<h1 id="pod&#x63A2;&#x9488;"><a name="pod&#x63A2;&#x9488;" class="anchor-navigation-ex-anchor" href="#pod&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>Pod&#x63A2;&#x9488;</h1>
+<p>&#x63A2;&#x9488;&#x662F;&#x7531;kubelet&#x5BF9;&#x5BB9;&#x5668;&#x6267;&#x884C;&#x7684;&#x5B9A;&#x671F;&#x8BCA;&#x65AD;&#x3002;&#x8981;&#x6267;&#x884C;&#x8BCA;&#x65AD;&#xFF0C;kubelet&#x8C03;&#x7528;&#x7531;&#x5BB9;&#x5668;&#x5B9E;&#x73B0;&#x7684;Handler&#x3002;&#x6709;&#x4E09;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<ul>
+<li>ExecAction&#xFF1A;&#x5728;&#x5BB9;&#x5668;&#x5185;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x3002;&#x5982;&#x679C;&#x547D;&#x4EE4;&#x9000;&#x51FA;&#x65F6;&#x8FD4;&#x56DE;&#x7801;&#x4E3A;0&#x5219;&#x8BA4;&#x4E3A;&#x8BCA;&#x65AD;&#x6210;&#x529F;</li>
+<li>TCPSocketAction&#xFF1A;&#x5BF9;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x4E0A;&#x7684;&#x5BB9;&#x5668;&#x7684;IP&#x5730;&#x5740;&#x8FDB;&#x884C;TCP&#x68C0;&#x67E5;&#x3002;&#x5982;&#x679C;&#x7AEF;&#x53E3;&#x6253;&#x5F00;&#xFF0C;&#x5219;&#x8BCA;&#x65AD;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6210;&#x529F;&#x7684;</li>
+<li>HTTPGetAction&#xFF1A;&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;&#x548C;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x5BB9;&#x5668;&#x7684;IP&#x5730;&#x5740;&#x6267;&#x884C;HTTPGet&#x8BF7;&#x6C42;&#x3002;&#x5982;&#x679C;&#x54CD;&#x5E94;&#x7684;&#x72B6;&#x6001;&#x7801;&#x2F24;&#x4E8E;&#x7B49;&#x4E8E;200&#x4E14;&#x5C0F;&#x4E8E;400&#xFF0C;&#x5219;&#x8BCA;&#x65AD;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6210;&#x529F;&#x7684;</li>
+</ul>
+<p>&#x6BCF;&#x6B21;&#x63A2;&#x6D4B;&#x90FD;&#x5C06;&#x83B7;&#x5F97;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x7ED3;&#x679C;&#x4E4B;&#x4E00;&#xFF1A;</p>
+<ul>
+<li>&#x6210;&#x529F;&#xFF1A;&#x5BB9;&#x5668;&#x901A;&#x8FC7;&#x4E86;&#x8BCA;&#x65AD;&#x3002;</li>
+<li>&#x5931;&#x8D25;&#xFF1A;&#x5BB9;&#x5668;&#x672A;&#x901A;&#x8FC7;&#x8BCA;&#x65AD;&#x3002;</li>
+<li>&#x672A;&#x77E5;&#xFF1A;&#x8BCA;&#x65AD;&#x5931;&#x8D25;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x91C7;&#x53D6;&#x4EFB;&#x4F55;&#x884C;&#x52A8;</li>
+</ul>
+<h2 id="&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;"><a name="&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A2;&#x9488;&#x7684;&#x5206;&#x7C7B;</h2>
+<ul>
+<li>startupProbe&#xFF1A;&#x5F00;&#x59CB;&#x63A2;&#x9488;&#xFF0C;&#x5F00;&#x59CB;&#x68C0;&#x6D4B;&#x5417;&#xFF1F;</li>
+<li>livenessProbe&#xFF1A;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#xFF0C;&#x8FD8;&#x6D3B;&#x7740;&#x5417;&#xFF1F;</li>
+<li>readinessProbe&#xFF1A;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#xFF0C;&#x51C6;&#x5907;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x4E86;&#x5417;&#xFF1F;</li>
+</ul>
+<h3 id="readinessprobe&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><a name="readinessprobe&#x5C31;&#x7EEA;&#x63A2;&#x9488;" class="anchor-navigation-ex-anchor" href="#readinessprobe&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>readinessProbe&#x5C31;&#x7EEA;&#x63A2;&#x9488;</h3>
+<p>&#x4ECB;&#x7ECD;&#xFF1A;k8s&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#xFF0C;&#x89E3;&#x51B3;&#x5C24;&#x5176;&#x662F;&#x5728;&#x6269;&#x5BB9;&#x65F6;&#x4FDD;&#x8BC1;&#x63D0;&#x4F9B;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x670D;&#x52A1;&#x90FD;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;</p>
+<blockquote>
+<p>&#x9009;&#x9879;&#x8BF4;&#x660E;</p>
+<ul>
+<li>initialDelaySeconds&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x8981;&#x7B49;&#x5F85;&#x591A;&#x5C11;&#x79D2;&#x540E;&#x5C31;&#x63A2;&#x9488;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;0&#x79D2;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;0</li>
+<li>periodSeconds&#xFF1A;&#x6267;&#x884C;&#x63A2;&#x6D4B;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;10s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>timeoutSeconds&#xFF1A;&#x63A2;&#x9488;&#x6267;&#x884C;&#x68C0;&#x6D4B;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x7B49;&#x5F85;&#x54CD;&#x5E94;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>successThreshold&#xFF1A;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x540E;&#x8BA4;&#x4E3A;&#x6210;&#x529F;&#x7684;&#x6700;&#x5C0F;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1&#x3002;&#x5FC5;&#x987B;&#x4E3A;1&#x624D;&#x80FD;&#x6FC0;&#x6D3B;&#x548C;&#x542F;&#x52A8;&#x3002;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+<li>failureThreshold&#xFF1A;&#x63A2;&#x6D4B;&#x5931;&#x8D25;&#x7684;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x91CD;&#x8BD5;&#x4E00;&#x5B9A;&#x6B21;&#x6570;&#x540E;&#x5C06;&#x8BA4;&#x4E3A;&#x5931;&#x8D25;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+</ul>
+</blockquote>
+<h4 id="&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><a name="&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;</h4>
+<ul>
+<li>&#x57FA;&#x4E8E; HTTP GET &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> readiness-httpget-pod
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> myapp
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> readiness-httpget-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index1.html
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+<span class="hljs-comment"># &#x5F53;&#x524D;&#x5904;&#x4E8E;&#x6CA1;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x72B6;&#x6001;</span>
+$ kubectl get pod
+NAME                    READY   STATUS             RESTARTS        AGE
+readiness-httpget-pod   <span class="hljs-number">0</span>/<span class="hljs-number">1</span>     Running            <span class="hljs-number">0</span>               <span class="hljs-number">4</span>m16s
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;index1.html</span>
+$ kubectl exec -it readiness-httpget-pod -c readiness-httpget-container -- /bin/bash
+root@readiness-httpget-pod:/<span class="hljs-comment"># echo &quot;hehe&quot; &gt; /usr/share/nginx/html/index1.html</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x5C31;&#x5DF2;&#x7ECF;&#x5904;&#x4E8E;&#x5C31;&#x7EEA;&#x7684;&#x72B6;&#x6001;&#x4E86;</span>
+$ kubectl get pod
+NAME                    READY   STATUS             RESTARTS       AGE
+readiness-httpget-pod   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running            <span class="hljs-number">0</span>              <span class="hljs-number">5</span>m40s
+
+<span class="hljs-comment"># &#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5C31;&#x7EEA;&#x63A2;&#x6D4B;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x4F1A;&#x56DE;&#x5230;&#x672A;&#x5C31;&#x7EEA;&#x7684;&#x60C5;&#x51B5;</span>
+</code></pre>
+<ul>
+<li>&#x57FA;&#x4E8E; EXEC &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> readiness-exec-pod
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> myapp
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> readiness-exec-container
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;touch /tmp/live ; sleep 60; rm -rf /tmp/live; sleep 3600&quot;</span>]
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      exec:</span>
+<span class="hljs-attr">        command:</span> [<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;-e&quot;</span>, <span class="hljs-string">&quot;/tmp/live&quot;</span>]
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;60&#x79D2;&#x540E;&#x5C31;&#x53D8;&#x6210;&#x975E;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x4E86;</span>
+$ kubectl get pod -w
+NAME                 READY   STATUS    RESTARTS   AGE
+readiness-exec-pod   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">7</span>s
+readiness-exec-pod   <span class="hljs-number">0</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">69</span>s
+</code></pre>
+<p>&#x57FA;&#x4E8E;TCP Check&#x65B9;&#x5F0F;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> readiness-tcp-pod
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> myapp
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> readiness-tcp-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      tcpSocket:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<h4 id="&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x6D41;&#x91CF;&#x6D4B;&#x8BD5;"><a name="&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x6D41;&#x91CF;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x6D41;&#x91CF;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x6D41;&#x91CF;&#x6D4B;&#x8BD5;</h4>
+<p><img src="05.Pod&#x751F;&#x547D;&#x5468;&#x671F;.assets/image-20240906140721572.png" alt="image-20240906140721572"></p>
+<p>&#x5728;&#x5339;&#x914D;&#x53EF;&#x7528;pod&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6807;&#x7B7E;&#x5FC5;&#x987B;&#x5339;&#x914D;&#xFF0C;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x662F;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># pod-1.yaml</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> myapp
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+
+<span class="hljs-comment"># pod-2.yaml</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod<span class="hljs-bullet">-2</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> myapp
+<span class="hljs-attr">    version:</span> v1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+
+ <span class="hljs-comment"># &#x786E;&#x8BA4;&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;</span>
+ $ kubectl get pod --show-labels
+NAME    READY   STATUS    RESTARTS   AGE     LABELS
+pod<span class="hljs-bullet">-1</span>   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">2</span>m31s   app=myapp
+pod<span class="hljs-bullet">-2</span>   <span class="hljs-number">1</span>/<span class="hljs-number">1</span>     Running   <span class="hljs-number">0</span>          <span class="hljs-number">32</span>s     app=myapp,version=v1
+</code></pre>
+<p>&#x521B;&#x5EFA;service&#x8D44;&#x6E90;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6CE8;&#x610F;myapp&#x5C31;&#x662F;&#x6807;&#x7B7E;&#x4E3A;app=myapp&#x7684;pod</span>
+<span class="hljs-comment"># &#x6B64;&#x5904;&#x4E0D;&#x9700;&#x8981;&#x7406;&#x89E3;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x7EC6;&#x8BB2;&#xFF0C;&#x53EA;&#x662F;&#x7528;&#x6765;&#x9A8C;&#x8BC1;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x5BF9;&#x6D41;&#x91CF;&#x7684;&#x5F71;&#x54CD;</span>
+<span class="hljs-comment"># &#x6B64;&#x5904;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5F62;&#x6210;&#x591A;&#x4E2A;pod&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</span>
+$ kubectl create svc clusterip myapp --tcp=80:80
+service/myapp created
+$ kubectl get svc
+NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.0.0.1      &lt;none&gt;        443/TCP   46h
+myapp        ClusterIP   10.8.74.201   &lt;none&gt;        80/TCP    6s
+</code></pre>
+<p>&#x5C06;&#x4E24;&#x4E2A;pod&#x4E2D;&#x7684;&#x4E3B;&#x9875;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#xFF0C;&#x7528;&#x6765;&#x4F5C;&#x4E3A;&#x533A;&#x5206;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5982;&#x679C;pod&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;main&#x5BB9;&#x5668;&#xFF0C;&#x90A3;&#x4E48;&#x5728;exec&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5BB9;&#x5668;</span>
+$ kubectl <span class="hljs-built_in">exec</span> -it pod-1 -- /bin/bash
+root@pod-1:/<span class="hljs-comment"># echo pod-1 &gt; /usr/share/nginx/html/index.html</span>
+$ kubectl <span class="hljs-built_in">exec</span> -it pod-2 -- /bin/bash
+root@pod-2:/<span class="hljs-comment"># echo pod-2 &gt; /usr/share/nginx/html/index.html</span>
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x72B6;&#x6001;</p>
+<pre><code class="lang-bash">$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;label&#x4E3A; <code>app: test</code> &#x7684;pod&#xFF0C;&#x770B;&#x4E0B;&#x662F;&#x5426;&#x80FD;&#x88AB;&#x5339;&#x914D;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># 3.yaml</span>
+<span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod<span class="hljs-bullet">-3</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> test
+<span class="hljs-attr">    version:</span> v1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<p>&#x67E5;&#x770B;pod&#x72B6;&#x6001;&#xFF0C;&#x4FEE;&#x6539; <code>pod-3</code> &#x7684;&#x7F51;&#x9875;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-bash">$ kubectl get pod --show-labels
+NAME    READY   STATUS    RESTARTS   AGE     LABELS
+pod-1   1/1     Running   0          11m     app=myapp
+pod-2   1/1     Running   0          9m57s   app=myapp,version=v1
+pod-3   1/1     Running   0          51s     app=<span class="hljs-built_in">test</span>,version=v1
+
+$ kubectl <span class="hljs-built_in">exec</span> -it pod-3 -- /bin/bash
+root@pod-3:/<span class="hljs-comment"># echo pod-3 &gt; /usr/share/nginx/html/index.html</span>
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x72B6;&#x6001;,&#x53D1;&#x73B0; <code>pod-3</code> &#x5E76;&#x4E0D;&#x80FD;&#x88AB;&#x5339;&#x914D;&#x4E0A;</p>
+<pre><code class="lang-bash">$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-1
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0D;&#x6EE1;&#x8DB3;&#x5C31;&#x7EEA;&#x6761;&#x4EF6;&#x7684; <code>pod-4</code></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> pod<span class="hljs-bullet">-4</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> myapp
+<span class="hljs-attr">    version:</span> v1
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> myapp<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index1.html
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x4E3B;&#x9875;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it pod-4 -- /bin/bash
+root@pod-4:/<span class="hljs-comment"># echo pod-4 &gt; /usr/share/nginx/html/index.html</span>
+</code></pre>
+<p>&#x67E5;&#x770B;&#x72B6;&#x6001;&#x662F;&#x672A;&#x5C31;&#x7EEA;&#x7684;</p>
+<pre><code class="lang-bash">$ kubectl get pod --show-labels
+NAME    READY   STATUS    RESTARTS   AGE     LABELS
+pod-1   1/1     Running   0          17m     app=myapp
+pod-2   1/1     Running   0          15m     app=myapp,version=v1
+pod-3   1/1     Running   0          6m49s   app=<span class="hljs-built_in">test</span>,version=v1
+pod-4   0/1     Running   0          41s     app=myapp,version=v1
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<pre><code class="lang-bash">$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-1
+</code></pre>
+<p>&#x6EE1;&#x8DB3; <code>pod-4</code> &#x7684;&#x5C31;&#x7EEA;&#x6761;&#x4EF6;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it pod-4 -- /bin/bash
+root@pod-4:/<span class="hljs-comment"># touch /usr/share/nginx/html/index1.html</span>
+</code></pre>
+<p>&#x518D;&#x6B21;&#x9A8C;&#x8BC1;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<pre><code class="lang-bash">$ curl 10.8.74.201
+pod-1
+$ curl 10.8.74.201
+pod-2
+$ curl 10.8.74.201
+pod-4
+</code></pre>
+<h3 id="livenessprobe&#x5B58;&#x6D3B;&#x63A2;&#x9488;"><a name="livenessprobe&#x5B58;&#x6D3B;&#x63A2;&#x9488;" class="anchor-navigation-ex-anchor" href="#livenessprobe&#x5B58;&#x6D3B;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>livenessProbe&#x5B58;&#x6D3B;&#x63A2;&#x9488;</h3>
+<p>&#x4ECB;&#x7ECD;&#xFF1A;k8s&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#xFF0C;&#x89E3;&#x51B3;&#x867D;&#x7136;&#x6D3B;&#x7740;&#x4F46;&#x662F;&#x5DF2;&#x7ECF;&#x6B7B;&#x4E86;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<blockquote>
+<p>&#x9009;&#x9879;&#x8BF4;&#x660E;</p>
+<ul>
+<li>initialDelaySeconds&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x8981;&#x7B49;&#x5F85;&#x591A;&#x5C11;&#x79D2;&#x540E;&#x5C31;&#x63A2;&#x9488;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;0&#x79D2;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;0</li>
+<li>periodSeconds&#xFF1A;&#x6267;&#x884C;&#x63A2;&#x6D4B;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;10s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>timeoutSeconds&#xFF1A;&#x63A2;&#x9488;&#x6267;&#x884C;&#x68C0;&#x6D4B;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x7B49;&#x5F85;&#x54CD;&#x5E94;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>successThreshold&#xFF1A;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x540E;&#x8BA4;&#x4E3A;&#x6210;&#x529F;&#x7684;&#x6700;&#x5C0F;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1&#x3002;&#x5FC5;&#x987B;&#x4E3A;1&#x624D;&#x80FD;&#x6FC0;&#x6D3B;&#x548C;&#x542F;&#x52A8;&#x3002;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+<li>failureThreshold&#xFF1A;&#x63A2;&#x6D4B;&#x5931;&#x8D25;&#x7684;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x91CD;&#x8BD5;&#x4E00;&#x5B9A;&#x6B21;&#x6570;&#x540E;&#x5C06;&#x8BA4;&#x4E3A;&#x5931;&#x8D25;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+</ul>
+</blockquote>
+<h4 id="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><a name="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;</h4>
+<ul>
+<li>&#x57FA;&#x4E8E; Exec &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> liveness-exec-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> liveness-exec-container
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;touch /tmp/live; sleep 60; rm -rf /tmp/live; sleep 3600&quot;</span>]
+<span class="hljs-attr">    livenessProbe:</span>
+<span class="hljs-attr">      exec:</span>
+<span class="hljs-attr">        command:</span> [<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;-e&quot;</span>, <span class="hljs-string">&quot;/tmp/live&quot;</span>]
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<p>&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4EE5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x53D1;&#x751F;&#x91CD;&#x542F;&#x7684;&#x4E8B;&#x4EF6;</p>
+<pre><code class="lang-bash">$ kubectl get pod -w
+NAME                READY   STATUS    RESTARTS   AGE
+liveness-exec-pod   1/1     Running   0          11s
+liveness-exec-pod   1/1     Running   1 (1s ago)   101s
+liveness-exec-pod   1/1     Running   2 (1s ago)   3m20s
+</code></pre>
+<ul>
+<li>&#x57FA;&#x4E8E; HTTP Get &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> liveness-httpget-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> liveness-httpget-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    livenessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index.html
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">      timeoutSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<p>&#x5220;&#x9664; <code>index.html</code> &#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x5176;&#x4E0D;&#x6EE1;&#x8DB3;&#x5B58;&#x6D3B;&#x63A2;&#x6D4B;&#x6761;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5728;&#x5220;&#x9664;index.html&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x9000;&#x51FA;&#x4E86;</span>
+$ kubectl <span class="hljs-built_in">exec</span> -it liveness-httpget-pod -- /bin/bash
+root@liveness-httpget-pod:/<span class="hljs-comment"># rm -f /usr/share/nginx/html/index.html </span>
+root@liveness-httpget-pod:/<span class="hljs-comment"># command terminated with exit code 137</span>
+</code></pre>
+<p>&#x91CD;&#x65B0;&#x67E5;&#x770B;pod&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CD;&#x542F;&#x4E86;</p>
+<pre><code class="lang-bash">$ kubectl get pod
+NAME                   READY   STATUS    RESTARTS      AGE
+liveness-httpget-pod   1/1     Running   1 (48s ago)   2m39s
+</code></pre>
+<p>&#x5728;&#x8FD0;&#x884C;&#x6B64;pod&#x7684;&#x8282;&#x70B9;&#x4E0A;&#x67E5;&#x770B;docker&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5BB9;&#x5668;&#x540D;&#x5B57;&#x662F; <code>&#x96C6;&#x7FA4;&#x540D;-pod&#x540D;-&#x5BB9;&#x5668;&#x540D;-hash-&#x91CD;&#x542F;&#x6B21;&#x6570;(&#x521D;&#x59CB;&#x662F;0)</code></p>
+<pre><code class="lang-bash">$ docker ps <span class="hljs-_">-a</span> |grep liveness-exec-container
+18c5ba02d684   39286ab8a5e1                                        <span class="hljs-string">&quot;/docker-entrypoint.&#x2026;&quot;</span>   About a minute ago   Up About a minute                         k8s_liveness-exec-container_liveness-httpget-pod_default_aa36504e-23a9-48d1-988c-4de0398c474f_1
+54b3a04bd6b0   39286ab8a5e1                                        <span class="hljs-string">&quot;/docker-entrypoint.&#x2026;&quot;</span>   3 minutes ago        Exited (0) About a minute ago             k8s_liveness-exec-container_liveness-httpget-pod_default_aa36504e-23a9-48d1-988c-4de0398c474f_0
+</code></pre>
+<ul>
+<li>&#x57FA;&#x4E8E; TCP Check &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> liveness-tcp-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> liveness-tcp-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    livenessProbe:</span>
+<span class="hljs-attr">      tcpSocket:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">      timeoutSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<h3 id="startupprobe&#x542F;&#x52A8;&#x63A2;&#x9488;"><a name="startupprobe&#x542F;&#x52A8;&#x63A2;&#x9488;" class="anchor-navigation-ex-anchor" href="#startupprobe&#x542F;&#x52A8;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>startupProbe&#x542F;&#x52A8;&#x63A2;&#x9488;</h3>
+<p>&#x4ECB;&#x7ECD;&#xFF1A;k8s&#x5728;1.16&#x7248;&#x672C;&#x540E;&#x589E;&#x52A0;startupProbe&#x63A2;&#x9488;&#xFF0C;&#x4E3B;&#x8981;&#x89E3;&#x51B3;&#x5728;&#x590D;&#x6742;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;readinessProbe&#x3001;livenessProbe&#x63A2;&#x9488;&#x65E0;&#x6CD5;&#x66F4;&#x597D;&#x7684;&#x5224;&#x65AD;&#x7A0B;&#x5E8F;&#x662F;&#x5426;&#x542F;&#x52A8;&#x3001;&#x662F;&#x5426;&#x5B58;&#x6D3B;&#x3002;</p>
+<blockquote>
+<p>&#x9009;&#x9879;&#x8BF4;&#x660E;</p>
+<ul>
+<li>initialDelaySeconds&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x8981;&#x7B49;&#x5F85;&#x591A;&#x5C11;&#x79D2;&#x540E;&#x5C31;&#x63A2;&#x9488;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;0&#x79D2;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;0</li>
+<li>periodSeconds&#xFF1A;&#x6267;&#x884C;&#x63A2;&#x6D4B;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;10s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>timeoutSeconds&#xFF1A;&#x63A2;&#x9488;&#x6267;&#x884C;&#x68C0;&#x6D4B;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x7B49;&#x5F85;&#x54CD;&#x5E94;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1s&#xFF0C;&#x5355;&#x4F4D;&#x201C;&#x79D2;&#x201D;&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1</li>
+<li>successThreshold&#xFF1A;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x540E;&#x8BA4;&#x4E3A;&#x6210;&#x529F;&#x7684;&#x6700;&#x5C0F;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1&#x3002;&#x5FC5;&#x987B;&#x4E3A;1&#x624D;&#x80FD;&#x6FC0;&#x6D3B;&#x548C;&#x542F;&#x52A8;&#x3002;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+<li>failureThreshold&#xFF1A;&#x63A2;&#x6D4B;&#x5931;&#x8D25;&#x7684;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x91CD;&#x8BD5;&#x4E00;&#x5B9A;&#x6B21;&#x6570;&#x540E;&#x5C06;&#x8BA4;&#x4E3A;&#x5931;&#x8D25;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x4E3A;1&#x3002;</li>
+</ul>
+</blockquote>
+<h4 id="&#x542F;&#x52A8;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><a name="&#x542F;&#x52A8;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;&#x63A2;&#x9488;&#x5B9E;&#x9A8C;</h4>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> startupprobe<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> startupprobe
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index2.html
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    startupProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        path:</span> /index1.html
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">10</span>
+<span class="hljs-attr">      failureThreshold:</span> <span class="hljs-number">30</span>
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+
+<span class="hljs-comment"># &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C06;&#x4F1A;&#x6709;&#x6700;&#x591A; 5 &#x5206;&#x949F; failureThreshold * periodSeconds&#xFF08;30 * 10 = 300s&#xFF09;&#x7684;&#x65F6;&#x95F4;&#x6765;&#x5B8C;&#x6210;&#x5176;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x5230;&#x8D85;&#x65F6;&#x90FD;&#x6CA1;&#x6709;&#x542F;&#x52A8;&#x5B8C;&#x6210;&#xFF0C;&#x5C31;&#x4F1A;&#x91CD;&#x542F;&#x3002;</span>
+</code></pre>
+<p>&#x521B;&#x5EFA; <code>index1.html</code> &#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it pod/startupprobe-1 -- /bin/bash
+root@startupprobe-1:/<span class="hljs-comment"># touch /usr/share/nginx/index1.html</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x4F9D;&#x65E7;&#x662F;&#x672A;&#x5C31;&#x7EEA;&#x7684;&#x72B6;&#x6001;</span>
+$ kubectl get pod
+NAME             READY   STATUS    RESTARTS   AGE
+startupprobe-1   0/1     Running   0          42s
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;index2.html&#x6587;&#x4EF6;</span>
+$ kubectl <span class="hljs-built_in">exec</span> -it pod/startupprobe-1 -- /bin/bash
+root@startupprobe-1:/<span class="hljs-comment"># touch /usr/share/nginx/index2.html</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x72B6;&#x6001;</span>
+$ kubectl get pod
+NAME             READY   STATUS    RESTARTS   AGE
+startupprobe-1   1/1     Running   0          43s
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x5220;&#x6389;&#x542F;&#x52A8;&#x63A2;&#x6D4B;&#x7684; <code>index1.html</code> &#x4F1A;&#x600E;&#x6837;&#xFF1F;</p>
+<h1 id="pod&#x94A9;&#x5B50;"><a name="pod&#x94A9;&#x5B50;" class="anchor-navigation-ex-anchor" href="#pod&#x94A9;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>Pod&#x94A9;&#x5B50;</h1>
+<p>Podhook&#xFF08;&#x94A9;&#x5B50;&#xFF09;&#x662F;&#x7531;Kubernetes&#x7BA1;&#x7406;&#x7684;kubelet&#x53D1;&#x8D77;&#x7684;&#xFF0C;&#x5F53;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x524D;&#x6216;&#x8005;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x7EC8;&#x6B62;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x662F;&#x5305;&#x542B;&#x5728;&#x5BB9;&#x5668;&#x7684;&#x2F63;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x4E2D;&#x3002;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x4E3A;Pod&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x90FD;&#x914D;&#x7F6E;hook</p>
+<p>Hook&#x7684;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>exec&#xFF1A;&#x6267;&#x884C;&#x4E00;&#x6BB5;&#x547D;&#x4EE4;</li>
+<li>HTTP&#xFF1A;&#x53D1;&#x9001;HTTP&#x8BF7;&#x6C42;</li>
+</ul>
+<p>&#x5728;k8s&#x4E2D;&#xFF0C;&#x7406;&#x60F3;&#x7684;&#x72B6;&#x6001;&#x662F;pod&#x4F18;&#x96C5;&#x91CA;&#x653E;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;Pod&#x90FD;&#x4F1A;&#x8FD9;&#x4E48;&#x987A;&#x5229;</p>
+<ul>
+<li>Pod&#x5361;&#x6B7B;&#xFF0C;&#x5904;&#x7406;&#x4E0D;&#x4E86;&#x4F18;&#x96C5;&#x9000;&#x51FA;&#x7684;&#x547D;&#x4EE4;&#x6216;&#x8005;&#x64CD;&#x4F5C;</li>
+<li>&#x4F18;&#x96C5;&#x9000;&#x51FA;&#x7684;&#x903B;&#x8F91;&#x6709;BUG&#xFF0C;&#x9677;&#x5165;&#x6B7B;&#x5FAA;&#x73AF;</li>
+<li>&#x4EE3;&#x7801;&#x95EE;&#x9898;&#xFF0C;&#x5BFC;&#x81F4;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x6548;&#x679C;</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x4EE5;&#x4E0A;&#x95EE;&#x9898;&#xFF0C;k8s&#x7684;Pod&#x7EC8;&#x6B62;&#x6D41;&#x7A0B;&#x4E2D;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&quot;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x5BB9;&#x5FCD;&#x7684;&#x65F6;&#x95F4;&quot;&#xFF0C;&#x5373;graceperiod(&#x5728;pod.spec.terminationGracePeriodSeconds&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;)&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x9ED8;&#x8BA4;&#x662F;30&#x79D2;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x6267;&#x884C;kubectl delete&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;--grace-period&#x53C2;&#x6570;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x4F18;&#x96C5;&#x9000;&#x51FA;&#x65F6;&#x95F4;&#x6765;&#x8986;&#x76D6;Pod&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x914D;&#x7F6E;&#x7684;grace period&#x8D85;&#x8FC7;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#xFF0C;k8s&#x5C31;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x5F3A;&#x5236;kill Pod&#x3002;</p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E0E;preStopHook&#x548C;SIGTERM&#x4FE1;&#x53F7;&#x5E76;&#x884C;&#x53D1;&#x2F63;&#x3002;k8s&#x4E0D;&#x4F1A;&#x7B49;&#x5F85;preStopHook&#x5B8C;&#x6210;&#x3002;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E94;&#x5728;terminationGracePeriod&#x4E4B;&#x524D;&#x9000;&#x51FA;&#x3002;</p>
+<h2 id="pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;"><a name="pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>Pod&#x94A9;&#x5B50;&#x5B9E;&#x9A8C;</h2>
+<ul>
+<li>&#x57FA;&#x4E8E; exec &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> hook-exec-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> hook-exec-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    imagePullPolicy:</span> IfNotPresent
+<span class="hljs-attr">    lifecycle:</span>
+<span class="hljs-attr">      postStart:</span>
+<span class="hljs-attr">        exec:</span>
+<span class="hljs-attr">          command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;echo postStart &gt; /usr/share/message&quot;</span>]
+<span class="hljs-attr">      preStop:</span>
+<span class="hljs-attr">        exec:</span>
+<span class="hljs-attr">          command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;echo preStart &gt; /usr/share/message&quot;</span>]
+<span class="hljs-attr">    resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;pod&#x7684;&#x5185;&#x90E8;&#xFF0C;&#x5199;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x67E5;&#x770B;&#x6B64;&#x6587;&#x4EF6;&#x7684;shell&#x547D;&#x4EE4;</p>
+<pre><code class="lang-bash">$ kubectl <span class="hljs-built_in">exec</span> -it pod/hook-exec-pod -- /bin/bash
+root@hook-exec-pod:/<span class="hljs-comment"># while true;</span>
+&gt; <span class="hljs-keyword">do</span> 
+&gt; cat /usr/share/message
+&gt; <span class="hljs-keyword">done</span>
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6B64;pod&#x5C31;&#x80FD;&#x770B;&#x5230;&#x7ED3;&#x675F;&#x7684;&#x94A9;&#x5B50;&#x4FE1;&#x606F;&#x4E86;</span>
+</code></pre>
+<ul>
+<li>&#x57FA;&#x4E8E; HTTP Get &#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5; webserver</span>
+$ docker run -it --rm -p 1234:80 nginx:latest
+</code></pre>
+<p>&#x542F;&#x52A8;&#x4E00;&#x4E2A;pod&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5220;&#x9664;&#xFF0C;&#x67E5;&#x770B;nginx&#x5BB9;&#x5668;&#x65E5;&#x5FD7;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BB0;&#x5F55;&#x4E86;&#x8FD9;&#x4E24;&#x6B21;&#x7684;http&#x8BF7;&#x6C42;</p>
+<pre><code class="lang-yaml"><span class="hljs-number">2024</span>/<span class="hljs-number">09</span>/<span class="hljs-number">06</span> <span class="hljs-number">07</span>:<span class="hljs-number">35</span>:<span class="hljs-number">23</span> [error] <span class="hljs-number">29</span><span class="hljs-comment">#29: *1 open() &quot;/usr/share/nginx/html/poststarthook.html&quot; failed (2: No such file or directory), client: 192.168.173.101, server: localhost, request: &quot;GET /poststarthook.html HTTP/1.1&quot;, host: &quot;192.168.173.100:1234&quot;</span>
+<span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.101</span> - - [<span class="hljs-number">06</span>/Sep/<span class="hljs-number">2024</span>:<span class="hljs-number">07</span>:<span class="hljs-number">35</span>:<span class="hljs-number">23</span> +<span class="hljs-number">0000</span>] <span class="hljs-string">&quot;GET /poststarthook.html HTTP/1.1&quot;</span> <span class="hljs-number">404</span> <span class="hljs-number">153</span> <span class="hljs-string">&quot;-&quot;</span> <span class="hljs-string">&quot;kube-lifecycle/1.29&quot;</span> <span class="hljs-string">&quot;-&quot;</span>
+<span class="hljs-number">2024</span>/<span class="hljs-number">09</span>/<span class="hljs-number">06</span> <span class="hljs-number">07</span>:<span class="hljs-number">35</span>:<span class="hljs-number">45</span> [error] <span class="hljs-number">29</span><span class="hljs-comment">#29: *1 open() &quot;/usr/share/nginx/html/prestophook.html&quot; failed (2: No such file or directory), client: 192.168.173.101, server: localhost, request: &quot;GET /prestophook.html HTTP/1.1&quot;, host: &quot;192.168.173.100:1234&quot;</span>
+<span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.101</span> - - [<span class="hljs-number">06</span>/Sep/<span class="hljs-number">2024</span>:<span class="hljs-number">07</span>:<span class="hljs-number">35</span>:<span class="hljs-number">45</span> +<span class="hljs-number">0000</span>] <span class="hljs-string">&quot;GET /prestophook.html HTTP/1.1&quot;</span> <span class="hljs-number">404</span> <span class="hljs-number">153</span> <span class="hljs-string">&quot;-&quot;</span> <span class="hljs-string">&quot;kube-lifecycle/1.29&quot;</span> <span class="hljs-string">&quot;-&quot;</span>
+</code></pre>
+<h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>Pod&#x2F63;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;initC&#x3001;startupProbe&#x3001;livenessProbe&#x3001;readinessProbe&#x3001;hook&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x5E76;&#x4E14;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5168;&#x90E8;&#x3001;&#x90E8;&#x5206;&#x6216;&#x8005;&#x5B8C;&#x5168;&#x4E0D;&#x7528;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Pod
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> lifecycle-pod
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> lifecycle-pod
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  containers:</span>
+<span class="hljs-attr">  - name:</span> busybox-container
+<span class="hljs-attr">    image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-string">&quot;-c&quot;</span>,<span class="hljs-string">&quot;touch /tmp/live ; sleep 600; rm -rf /tmp/live; sleep 3600&quot;</span>]
+<span class="hljs-attr">    livenessProbe:</span>
+<span class="hljs-attr">      exec:</span>
+<span class="hljs-attr">        command:</span> [<span class="hljs-string">&quot;test&quot;</span>,<span class="hljs-string">&quot;-e&quot;</span>,<span class="hljs-string">&quot;/tmp/live&quot;</span>]
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    lifecycle:</span>
+<span class="hljs-attr">      postStart:</span>
+<span class="hljs-attr">        httpGet:</span>
+<span class="hljs-attr">          host:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>
+<span class="hljs-attr">          path:</span> poststarthook.html
+<span class="hljs-attr">          port:</span> <span class="hljs-number">1234</span>
+<span class="hljs-attr">      preStop:</span>
+<span class="hljs-attr">        httpGet:</span>
+<span class="hljs-attr">          host:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.173</span><span class="hljs-number">.100</span>
+<span class="hljs-attr">          path:</span> prestophook.html
+<span class="hljs-attr">          port:</span> <span class="hljs-number">1234</span>
+<span class="hljs-attr">      resources:</span>
+<span class="hljs-attr">      limits:</span>
+<span class="hljs-attr">        memory:</span> <span class="hljs-string">&quot;128Mi&quot;</span>
+<span class="hljs-attr">        cpu:</span> <span class="hljs-string">&quot;500m&quot;</span>
+<span class="hljs-attr">  - name:</span> myapp-container
+<span class="hljs-attr">    image:</span> nginx:latest
+<span class="hljs-attr">    livenessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index.html
+<span class="hljs-attr">      initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">      periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">      timeoutSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    readinessProbe:</span>
+<span class="hljs-attr">      httpGet:</span>
+<span class="hljs-attr">        port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">        path:</span> /index1.html
+<span class="hljs-attr">        initialDelaySeconds:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">        periodSeconds:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">    initContainers:</span>
+<span class="hljs-attr">    - name:</span> init-myservice
+<span class="hljs-attr">      image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">      command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;</span>]
+<span class="hljs-attr">    - name:</span> init-mydb
+<span class="hljs-attr">      image:</span> aaronxudocker/tools:busybox
+<span class="hljs-attr">      command:</span> [<span class="hljs-string">&apos;sh&apos;</span>, <span class="hljs-string">&apos;-c&apos;</span>, <span class="hljs-string">&apos;until nslookup mydb; do echo waiting for mydb; sleep 2; done;&apos;</span>]
+</code></pre>
+<h1 id="&#x8C03;&#x5EA6;pod"><a name="&#x8C03;&#x5EA6;pod" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x5EA6;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x5EA6;Pod</h1>
+<p><img src="05.Pod&#x751F;&#x547D;&#x5468;&#x671F;.assets/image-20240906204437000.png" alt="image-20240906204437000"></p>
+<p>&#x5B66;&#x524D;&#x6CBF;IT&#xFF0C;&#x5230;&#x82F1;&#x683C;&#x79D1;&#x6280;!&#x672C;&#x6587;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A; 2025-03-30 23:07:56</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../04.资源清单/04.资源清单.html" class="navigation navigation-prev " aria-label="Previous page: 04.资源清单">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../06.Pod控制器/06.Pod控制器.html" class="navigation navigation-next " aria-label="Next page: 06.Pod控制器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05.Pod生命周期","level":"1.2.5","depth":2,"next":{"title":"06.Pod控制器","level":"1.2.6","depth":2,"path":"06.Pod控制器/06.Pod控制器.md","ref":"06.Pod控制器/06.Pod控制器.md","articles":[]},"previous":{"title":"04.资源清单","level":"1.2.4","depth":2,"path":"04.资源清单/04.资源清单.md","ref":"04.资源清单/04.资源清单.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","theme-comscore","hide-element","code","-lunr","-search","search-pro","-sharing","sharing-plus","ancre-navigation","wide-page","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search-pro":{},"wide-page":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"05.Pod生命周期/05.Pod生命周期.md","mtime":"2025-06-24T01:11:15.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-27T09:24:02.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,686 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03.安装手册 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../04.资源清单/04.资源清单.html" />
+    
+    
+    <link rel="prev" href="../02.Pod与网络/02.Pod与网络.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                <a href="../01.kubernetes概述/01.kubernetes概述.html">
+            
+                    
+                    01.kubernetes概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../02.Pod与网络/02.Pod与网络.html">
+            
+                <a href="../02.Pod与网络/02.Pod与网络.html">
+            
+                    
+                    02.Pod与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="03.安装手册.html">
+            
+                <a href="03.安装手册.html">
+            
+                    
+                    03.安装手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../04.资源清单/04.资源清单.html">
+            
+                <a href="../04.资源清单/04.资源清单.html">
+            
+                    
+                    04.资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                <a href="../05.Pod生命周期/05.Pod生命周期.html">
+            
+                    
+                    05.Pod生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../06.Pod控制器/06.Pod控制器.html">
+            
+                <a href="../06.Pod控制器/06.Pod控制器.html">
+            
+                    
+                    06.Pod控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../07.Service/07.Service.html">
+            
+                <a href="../07.Service/07.Service.html">
+            
+                    
+                    07.Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../08.数据存储/08.数据存储.html">
+            
+                <a href="../08.数据存储/08.数据存储.html">
+            
+                    
+                    08.数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../09.调度器/09.调度器.html">
+            
+                <a href="../09.调度器/09.调度器.html">
+            
+                    
+                    09.调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../10.安全认证/10.安全认证.html">
+            
+                <a href="../10.安全认证/10.安全认证.html">
+            
+                    
+                    10.安全认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../11.DashBoard/11.DashBoard.html">
+            
+                <a href="../11.DashBoard/11.DashBoard.html">
+            
+                    
+                    11.DashBoard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >03.安装手册</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#03&#x5B89;&#x88C5;&#x624B;&#x518C;"><b></b>03.&#x5B89;&#x88C5;&#x624B;&#x518C;</a></li><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x51C6;&#x5907;"><b></b>&#x73AF;&#x5883;&#x51C6;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;"><b></b>&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;"><b></b>&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x56FA;&#x5B9A;&#x7F51;&#x5361;&#x53EF;&#x9009;"><b></b>&#x56FA;&#x5B9A;&#x7F51;&#x5361;(&#x53EF;&#x9009;)</a></li></ul><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;kube-proxy-&#x6A21;&#x5F0F;&#x4E3A;-ipvs"><b></b>&#x4FEE;&#x6539;kube-proxy &#x6A21;&#x5F0F;&#x4E3A; ipvs</a></li></ul></div><a href="#03&#x5B89;&#x88C5;&#x624B;&#x518C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="03&#x5B89;&#x88C5;&#x624B;&#x518C;"><a name="03&#x5B89;&#x88C5;&#x624B;&#x518C;" class="anchor-navigation-ex-anchor" href="#03&#x5B89;&#x88C5;&#x624B;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>03.&#x5B89;&#x88C5;&#x624B;&#x518C;</h1>
+<h1 id="&#x73AF;&#x5883;&#x51C6;&#x5907;"><a name="&#x73AF;&#x5883;&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x51C6;&#x5907;</h1>
+<table>
+<thead>
+<tr>
+<th>&#x89D2;&#x8272;</th>
+<th>&#x4E3B;&#x673A;&#x540D;</th>
+<th>ip&#x5730;&#x5740;</th>
+<th>&#x914D;&#x7F6E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master</td>
+<td>master01</td>
+<td>192.168.173.100</td>
+<td>2C4G60G</td>
+</tr>
+<tr>
+<td>node01</td>
+<td>node01</td>
+<td>192.168.173.101</td>
+<td>2C2G60G</td>
+</tr>
+<tr>
+<td>node02</td>
+<td>node2</td>
+<td>192.168.173.102</td>
+<td>2C2G60G</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;"><a name="&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;</h1>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7F51;&#x5361;&#x914D;&#x7F6E;</span>
+<span class="hljs-comment"># cat /etc/NetworkManager/system-connections/ens160.nmconnection</span>
+[ipv4]
+method=manual
+address1=192.168.173.100/24,192.168.173.2
+dns=114.114.114.114;114.114.115.115
+<span class="hljs-comment"># cat /etc/NetworkManager/system-connections/ens192.nmconnection</span>
+[connection]
+autoconnect=<span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># &#x8C03;&#x7528; nmcli &#x91CD;&#x542F;&#x8BBE;&#x5907;&#x548C;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;</span>
+nmcli d d ens192
+nmcli d r ens160 
+nmcli c r ens160
+<span class="hljs-comment"># Rocky &#x7CFB;&#x7EDF;&#x8F6F;&#x4EF6;&#x6E90;&#x66F4;&#x6362;</span>
+sed <span class="hljs-_">-e</span> <span class="hljs-string">&apos;s|^mirrorlist=|#mirrorlist=|g&apos;</span> \
+    <span class="hljs-_">-e</span> <span class="hljs-string">&apos;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g&apos;</span> \
+    -i.bak \
+    /etc/yum.repos.d/[Rr]ocky*.repo
+
+dnf makecache
+<span class="hljs-comment"># &#x9632;&#x706B;&#x5899;&#x4FEE;&#x6539; firewalld &#x4E3A; iptables</span>
+systemctl stop firewalld
+systemctl <span class="hljs-built_in">disable</span> firewalld
+
+yum -y install iptables-services
+systemctl start iptables
+iptables -F
+systemctl <span class="hljs-built_in">enable</span> iptables
+service iptables save
+<span class="hljs-comment"># &#x7981;&#x7528; Selinux</span>
+setenforce 0
+sed -i <span class="hljs-string">&quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot;</span> /etc/selinux/config
+grubby --update-kernel ALL --args selinux=0
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x662F;&#x5426;&#x7981;&#x7528;&#xFF0C;grubby --info DEFAULT</span>
+<span class="hljs-comment"># &#x56DE;&#x6EDA;&#x5185;&#x6838;&#x5C42;&#x7981;&#x7528;&#x64CD;&#x4F5C;&#xFF0C;grubby --update-kernel ALL --remove-args selinux</span>
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x65F6;&#x533A;</span>
+timedatectl <span class="hljs-built_in">set</span>-timezone Asia/Shanghai
+<span class="hljs-comment"># &#x5173;&#x95ED; swap &#x5206;&#x533A;</span>
+swapoff <span class="hljs-_">-a</span>
+sed -i <span class="hljs-string">&apos;s:/dev/mapper/rl-swap:#/dev/mapper/rl-swap:g&apos;</span> /etc/fstab
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;&#x4E3B;&#x673A;&#x540D;</span>
+hostnamectl  <span class="hljs-built_in">set</span>-hostname k8s-node01
+<span class="hljs-comment"># &#x5B89;&#x88C5; ipvs</span>
+yum install -y ipvsadm
+<span class="hljs-comment"># &#x5F00;&#x542F;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;net.ipv4.ip_forward=1&apos;</span> &gt;&gt; /etc/sysctl.conf
+sysctl -p
+<span class="hljs-comment"># &#x52A0;&#x8F7D; bridge</span>
+yum install -y epel-release
+yum install -y bridge-utils
+
+modprobe br_netfilter
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;br_netfilter&apos;</span> &gt;&gt; /etc/modules-load.d/bridge.conf
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;net.bridge.bridge-nf-call-iptables=1&apos;</span> &gt;&gt; /etc/sysctl.conf
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;net.bridge.bridge-nf-call-ip6tables=1&apos;</span> &gt;&gt; /etc/sysctl.conf
+sysctl -p
+<span class="hljs-comment"># &#x6DFB;&#x52A0; docker-ce yum &#x6E90;</span>
+<span class="hljs-comment"># &#x4E2D;&#x79D1;&#x5927;(ustc)</span>
+sudo dnf config-manager --add-repo https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
+<span class="hljs-built_in">cd</span> /etc/yum.repos.d
+<span class="hljs-comment"># &#x5207;&#x6362;&#x4E2D;&#x79D1;&#x5927;&#x6E90;</span>
+sed -i <span class="hljs-string">&apos;s#download.docker.com#mirrors.ustc.edu.cn/docker-ce#g&apos;</span> docker-ce.repo
+
+<span class="hljs-comment"># &#x5B89;&#x88C5; docker-ce</span>
+yum -y install docker-ce
+
+<span class="hljs-comment"># &#x914D;&#x7F6E; daemon.</span>
+cat &gt; /etc/docker/daemon.json &lt;&lt;EOF
+{
+  <span class="hljs-string">&quot;exec-opts&quot;</span>: [<span class="hljs-string">&quot;native.cgroupdriver=systemd&quot;</span>],
+  <span class="hljs-string">&quot;log-driver&quot;</span>: <span class="hljs-string">&quot;json-file&quot;</span>,
+  <span class="hljs-string">&quot;log-opts&quot;</span>: {
+    <span class="hljs-string">&quot;max-size&quot;</span>: <span class="hljs-string">&quot;100m&quot;</span>,
+    <span class="hljs-string">&quot;max-file&quot;</span>: <span class="hljs-string">&quot;100&quot;</span>
+  },
+  <span class="hljs-string">&quot;insecure-registries&quot;</span>: [<span class="hljs-string">&quot;iproute.cn:34443&quot;</span>],
+  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [
+          <span class="hljs-string">&quot;https://iproute.cn:34443&quot;</span>,
+          <span class="hljs-string">&quot;https://docker.m.daocloud.io&quot;</span>
+  ]
+}
+EOF
+mkdir -p /etc/systemd/system/docker.service.d
+
+<span class="hljs-comment"># &#x91CD;&#x542F;docker&#x670D;&#x52A1;</span>
+systemctl daemon-reload &amp;&amp; systemctl restart docker &amp;&amp; systemctl <span class="hljs-built_in">enable</span> docker
+<span class="hljs-comment"># &#x5B89;&#x88C5; cri-docker</span>
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.9/cri-dockerd-0.3.9.amd64.tgz
+tar -xf cri-dockerd-0.3.9.amd64.tgz
+cp cri-dockerd/cri-dockerd /usr/bin/
+chmod +x /usr/bin/cri-dockerd
+
+<span class="hljs-comment"># &#x914D;&#x7F6E; cri-docker &#x670D;&#x52A1;</span>
+cat &lt;&lt;<span class="hljs-string">&quot;EOF&quot;</span> &gt; /usr/lib/systemd/system/cri-docker.service
+[Unit]
+Description=CRI Interface <span class="hljs-keyword">for</span> Docker Application Container Engine
+Documentation=https://docs.mirantis.com
+After=network-online.target firewalld.service docker.service
+Wants=network-online.target
+Requires=cri-docker.socket
+[Service]
+Type=notify
+ExecStart=/usr/bin/cri-dockerd --network-plugin=cni --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.8
+ExecReload=/bin/<span class="hljs-built_in">kill</span> <span class="hljs-_">-s</span> HUP <span class="hljs-variable">$MAINPID</span>
+TimeoutSec=0
+RestartSec=2
+Restart=always
+StartLimitBurst=3
+StartLimitInterval=60s
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+TasksMax=infinity
+Delegate=yes
+KillMode=process
+[Install]
+WantedBy=multi-user.target
+EOF
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0; cri-docker &#x5957;&#x63A5;&#x5B57;</span>
+cat &lt;&lt;<span class="hljs-string">&quot;EOF&quot;</span> &gt; /usr/lib/systemd/system/cri-docker.socket
+[Unit]
+Description=CRI Docker Socket <span class="hljs-keyword">for</span> the API
+PartOf=cri-docker.service
+[Socket]
+ListenStream=%t/cri-dockerd.sock
+SocketMode=0660
+SocketUser=root
+SocketGroup=docker
+[Install]
+WantedBy=sockets.target
+EOF
+
+<span class="hljs-comment"># &#x542F;&#x52A8; cri-docker &#x5BF9;&#x5E94;&#x670D;&#x52A1;</span>
+systemctl daemon-reload
+systemctl <span class="hljs-built_in">enable</span> cri-docker
+systemctl start cri-docker
+systemctl is-active cri-docker
+<span class="hljs-comment"># &#x6DFB;&#x52A0; kubeadm yum &#x6E90;</span>
+cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
+EOF
+
+<span class="hljs-comment"># &#x5B89;&#x88C5; kubeadm 1.29 &#x7248;&#x672C;</span>
+yum install -y kubelet-1.29.0 kubectl-1.29.0 kubeadm-1.29.0
+systemctl <span class="hljs-built_in">enable</span> kubelet.service
+<span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x4E3B;&#x8282;&#x70B9;</span>
+kubeadm init\
+ --apiserver-advertise-address=192.168.88.10\
+ --image-repository registry.aliyuncs.com/google_containers\
+ --kubernetes-version 1.29.2\
+ --service-cidr=10.10.0.0/12\
+ --pod-network-cidr=10.244.0.0/16\
+ --ignore-preflight-errors=all\
+ --cri-socket unix:///var/run/cri-dockerd.sock
+<span class="hljs-comment"># node &#x52A0;&#x5165;</span>
+kubeadm join 192.168.173.100:6443 --token jghzcm.mz6js92jom1flry0 \
+        --discovery-token-ca-cert-hash sha256:63253f3d82fa07022af61bb2ae799177d2b0b6fe8398d5273098f4288ce67793  --cri-socket unix:///var/run/cri-dockerd.sock
+
+<span class="hljs-comment"># work token &#x8FC7;&#x671F;&#x540E;&#xFF0C;&#x91CD;&#x65B0;&#x7533;&#x8BF7;</span>
+kubeadm token create --print-join-command
+</code></pre>
+<h1 id="&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;"><a name="&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;</h1>
+<pre><code class="lang-bash">https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises<span class="hljs-comment">#install-calico-with-kubernetes-api-datastore-more-than-50-nodes</span>
+
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.26.3/manifests/calico-typha.yaml -o calico.yaml
+    CALICO_IPV4POOL_CIDR    &#x6307;&#x5B9A;&#x4E3A; pod &#x5730;&#x5740;
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;&#x4E3A; BGP &#x6A21;&#x5F0F;</span>
+<span class="hljs-comment"># Enable IPIP</span>
+- name: CALICO_IPV4POOL_IPIP
+  value: <span class="hljs-string">&quot;Always&quot;</span>  <span class="hljs-comment">#&#x6539;&#x6210;Off</span>
+
+kubectl apply <span class="hljs-_">-f</span> calico-typha.yaml
+kubectl get pod -A
+</code></pre>
+<h2 id="&#x56FA;&#x5B9A;&#x7F51;&#x5361;&#x53EF;&#x9009;"><a name="&#x56FA;&#x5B9A;&#x7F51;&#x5361;&#x53EF;&#x9009;" class="anchor-navigation-ex-anchor" href="#&#x56FA;&#x5B9A;&#x7F51;&#x5361;&#x53EF;&#x9009;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FA;&#x5B9A;&#x7F51;&#x5361;(&#x53EF;&#x9009;)</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x76EE;&#x6807; IP &#x6216;&#x57DF;&#x540D;&#x53EF;&#x8FBE;</span>
+        - name: calico-node
+          image: registry.geoway.com/calico/node:v3.19.1
+          env:
+            <span class="hljs-comment"># Auto-detect the BGP IP address.</span>
+            - name: IP
+              value: <span class="hljs-string">&quot;autodetect&quot;</span>
+            - name: IP_AUTODETECTION_METHOD
+              value: <span class="hljs-string">&quot;can-reach=www.google.com&quot;</span>
+kubectl <span class="hljs-built_in">set</span> env daemonset/calico-node -n kube-system IP_AUTODETECTION_METHOD=can-reach=www.google.com
+<span class="hljs-comment"># &#x5339;&#x914D;&#x76EE;&#x6807;&#x7F51;&#x5361;</span>
+- name: calico-node
+  image: registry.geoway.com/calico/node:v3.19.1
+  env:
+    <span class="hljs-comment"># Auto-detect the BGP IP address.</span>
+    - name: IP
+      value: <span class="hljs-string">&quot;autodetect&quot;</span>
+    - name: IP_AUTODETECTION_METHOD
+      value: <span class="hljs-string">&quot;interface=eth.*&quot;</span>
+<span class="hljs-comment"># &#x6392;&#x9664;&#x5339;&#x914D;&#x7F51;&#x5361;</span>
+- name: calico-node
+  image: registry.geoway.com/calico/node:v3.19.1
+  env:
+    <span class="hljs-comment"># Auto-detect the BGP IP address.</span>
+    - name: IP
+      value: <span class="hljs-string">&quot;autodetect&quot;</span>
+    - name: IP_AUTODETECTION_METHOD
+      value: <span class="hljs-string">&quot;skip-interface=eth.*&quot;</span>
+<span class="hljs-comment"># CIDR</span>
+- name: calico-node
+  image: registry.geoway.com/calico/node:v3.19.1
+  env:
+    <span class="hljs-comment"># Auto-detect the BGP IP address.</span>
+    - name: IP
+      value: <span class="hljs-string">&quot;autodetect&quot;</span>
+    - name: IP_AUTODETECTION_METHOD
+      value: <span class="hljs-string">&quot;cidr=192.168.200.0/24,172.15.0.0/24&quot;</span>
+</code></pre>
+<h1 id="&#x4FEE;&#x6539;kube-proxy-&#x6A21;&#x5F0F;&#x4E3A;-ipvs"><a name="&#x4FEE;&#x6539;kube-proxy-&#x6A21;&#x5F0F;&#x4E3A;-ipvs" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;kube-proxy-&#x6A21;&#x5F0F;&#x4E3A;-ipvs"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;kube-proxy &#x6A21;&#x5F0F;&#x4E3A; ipvs</h1>
+<pre><code class="lang-bash"><span class="hljs-comment"># kubectl edit configmap kube-proxy -n kube-system</span>
+mode: ipvs
+
+kubectl delete pod -n kube-system <span class="hljs-_">-l</span> k8s-app=kube-proxy
+</code></pre>
+<p>&#x5B66;&#x524D;&#x6CBF;IT&#xFF0C;&#x5230;&#x82F1;&#x683C;&#x79D1;&#x6280;!&#x672C;&#x6587;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A; 2025-03-30 23:07:56</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../02.Pod与网络/02.Pod与网络.html" class="navigation navigation-prev " aria-label="Previous page: 02.Pod与网络">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../04.资源清单/04.资源清单.html" class="navigation navigation-next " aria-label="Next page: 04.资源清单">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03.安装手册","level":"1.2.3","depth":2,"next":{"title":"04.资源清单","level":"1.2.4","depth":2,"path":"04.资源清单/04.资源清单.md","ref":"04.资源清单/04.资源清单.md","articles":[]},"previous":{"title":"02.Pod与网络","level":"1.2.2","depth":2,"path":"02.Pod与网络/02.Pod与网络.md","ref":"02.Pod与网络/02.Pod与网络.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","theme-comscore","hide-element","code","-lunr","-search","search-pro","-sharing","sharing-plus","ancre-navigation","wide-page","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search-pro":{},"wide-page":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"03.安装手册/03.安装手册.md","mtime":"2025-06-24T01:11:14.853Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-27T09:24:02.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
